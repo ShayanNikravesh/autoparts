@@ -919,9 +919,7 @@ p {
   border-right: 10px solid transparent;
   border-bottom: 13px solid #fff;
 }
-.custom-navbar .main-navbar ul li ul.nav-item-submenu li.nav-item-submenu-child:hover {
-  background-color: #e9ecef;
-}
+
 .custom-navbar .main-navbar ul li ul.nav-item-submenu li.nav-item-submenu-child:hover a {
   color: rgb(var(--theme-color-red));
 }
@@ -956,9 +954,7 @@ p {
   transition: all 0.4s ease;
   z-index: 1;
 }
-.custom-navbar .main-navbar ul li ul.nav-item-submenu li.nav-item-submenu-child ul li:hover {
-  background-color: #e9ecef;
-}
+
 .custom-navbar .main-navbar ul li ul.nav-item-submenu li.nav-item-submenu-child ul li:hover a {
   color: var(--bs-blue);
 }

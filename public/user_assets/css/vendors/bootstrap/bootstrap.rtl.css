@@ -6,7 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0d6efd;
+  --bs-blue: #0B2F3A;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -7405,6 +7405,10 @@ textarea.form-control-lg {
 
 .bg-white {
   background-color: #fff !important;
+}
+
+.bg-dark-blue {
+  background-color: #0B2F3A !important;
 }
 
 .bg-transparent {
