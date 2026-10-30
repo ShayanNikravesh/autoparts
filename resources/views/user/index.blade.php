@@ -139,8 +139,7 @@
                     <div class="swiper-slide text-center d-flex flex-column justify-content-between align-items-center">
                         <img src="{{asset('user_assets/img/Amazings.png')}}" alt="" class="amazing-img">
                         <img src="{{asset('user_assets/img/box.png')}}" alt="" class="box-img d-block">
-                        <a href="#" class="text-white d-block mt-3" title="">مشاهده همه <i
-                                class="fa fa-angle-left align-baseline ms-1"></i></a>
+                        <a href="#" class="text-white d-block mt-3" title="">مشاهده همه <i class="fa fa-angle-left align-baseline ms-1"></i></a>
                     </div>
                     <div class="swiper-slide border-radius-1-tr-br">
                         <img src="{{asset('user_assets/img/coat-1.jpg')}}" class="img-fluid" alt="">
