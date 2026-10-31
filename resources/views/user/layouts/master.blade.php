@@ -346,7 +346,7 @@
                         <!--Navbar Items Mobile Body:start-->
                         <div class="navbar-items-mobile-body p-3">
                             <ul class="navbar-parent">
-                                <li class="cyan-500 fs-6">دسته بندی کالاها</li>
+                                {{-- <li class="fs-6">دسته بندی کالاها</li> --}}
                                 <li class="border-bottom-gray-150 px-2 py-3">
                                     <a href="" class="fs-6 fw-bold d-block showSubMenu">
                                         <!--begin::Svg-->
@@ -361,7 +361,7 @@
                                                       fill="#000000" fill-rule="nonzero"/>
                                             </g>
                                         </svg><!--end::Svg Icon-->
-                                        کالاهای دیجیتال
+                                        دسته بندی کالاها
                                         <i class="fa fa-angle-left float-end"></i>
                                     </a>
 
@@ -370,11 +370,10 @@
                                         <li class="fs-5 border-bottom-gray-300 pb-2 fw-bold text-center">
                                             کالاهای دیجیتال
                                         </li>
-                                        <li class="py-3"><a href="javascript:void(0)"
-                                                            class="cyan-500 fs-6 backToProductCategories"><i
+                                        <li class="py-3"><a href="javascript:void(0)" class="fs-6 backToProductCategories"><i
                                                 class="fa fa-arrow-right me-2"></i>بازگشت به دسته بندی کالاها</a></li>
                                         <li class="border-bottom-gray-150 px-2 py-3">
-                                            <a href=""
+                                            <a href="javascript:;"
                                                class="fs-6 fw-bold d-block" title="">
                                                 موبایل
                                                 <i class="fa fa-angle-left float-end"></i>
