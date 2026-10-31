@@ -111,9 +111,9 @@
             <!-- Slider:start -->
             <div class="swiper headerSlider border-radius-3xl">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/banner/banner.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
                     <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/category-header-1.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
                     <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/category-header-2.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
-                    <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/category-header-3.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
                 </div>
                 <div class="swiper-button-next bg-light border-radius-circle"></div>
                 <div class="swiper-button-prev bg-light border-radius-circle"></div>
