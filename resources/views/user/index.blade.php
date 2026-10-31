@@ -229,26 +229,26 @@
         <!--Best Suggestions:End-->
 
         <!--    Banners:start-->
-        <div class="banners mt-4">
+        <div class="banners my-5">
             <div class="row">
-                <div class="col-6 col-lg-3 col-xl-3 mb-3">
+                <div class="col-6 mb-3">
                     <a href="" title="">
-                        <img src="{{asset('user_assets/img/banner-sm-1.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
+                        <img src="{{asset('user_assets/img/category-banner-1.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
                     </a>
                 </div>
-                <div class="col-6 col-md-6 col-lg-3 col-xl-3 mb-3">
+                <div class="col-6 mb-3">
                     <a href="" title="">
-                        <img src="{{asset('user_assets/img/banner-sm-2.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
+                        <img src="{{asset('user_assets/img/category-banner-2.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
                     </a>
                 </div>
-                <div class="col-6 col-md-6 col-lg-3 col-xl-3 mb-3">
+                <div class="col-6 mb-3">
                     <a href="" title="">
-                        <img src="{{asset('user_assets/img/banner-sm-3.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
+                        <img src="{{asset('user_assets/img/category-banner-2.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
                     </a>
                 </div>
-                <div class="col-6 col-md-6 col-lg-3 col-xl-3 mb-3">
+                <div class="col-6 mb-3">
                     <a href="" title="">
-                        <img src="{{asset('user_assets/img/banner-sm-4.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
+                        <img src="{{asset('user_assets/img/category-banner-1.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
                     </a>
                 </div>
             </div>
@@ -367,8 +367,8 @@
         </div>
         <!--    Banners:end-->
 
-        <!--    Suggestions:start-->
-        <section class="suggestions">
+        <!--Suggestions:start-->
+        {{-- <section class="suggestions">
             <h2 class="text-center fs-4">پیشنهاد برگ شاپ</h2>
             <div class="wrapper mt-4 border-radius-3xl border border-gray-300 overflow-hidden">
 
@@ -424,15 +424,14 @@
                 </div>
 
             </div>
-        </section>
-        <!--    Suggestions:end-->
+        </section> --}}
+        <!--Suggestions:end-->
 
         <!--    Best Brands:start-->
         <section class="best-brands border-radius-3xl border border-gray-300 mt-4 pb-4">
             <!--        Section Title:start-->
             <h2 class="text-center my-4 section-title fs-4">
-                <i class="fa fa-star"></i>
-                محبوب ترین برندها
+            برندها
             </h2>
             <!--        Section Title:end-->
 
