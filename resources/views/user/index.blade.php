@@ -105,32 +105,23 @@
     </div>
     <!--Story Section:end-->
 
-    <!--Header::start-->
-    <header class="header">
-        <!-- Slider:start -->
-        <div class="swiper headerSlider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/header-slider-1.jpg')}}" class="img-fluid"
-                                                                alt=""></a></div>
-                <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/header-slider-2.jpg')}}" class="img-fluid"
-                                                                alt=""></a></div>
-                <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/header-slider-3.jpg')}}" class="img-fluid"
-                                                                alt=""></a></div>
-                <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/header-slider-4.jpg')}}" class="img-fluid"
-                                                                alt=""></a></div>
-            </div>
-            <div class="swiper-button-next bg-light border-radius-circle"></div>
-            <div class="swiper-button-prev bg-light border-radius-circle"></div>
-            <div class="swiper-pagination"></div>
-
-        </div>
-        <!-- Slider:end -->
-    </header>
-    <!--Header::end-->
-
     <!--Main:start-->
     <main class="container mt-5">
+        <header class="header my-5">
+            <!-- Slider:start -->
+            <div class="swiper headerSlider border-radius-3xl">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/category-header-1.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
+                    <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/category-header-2.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
+                    <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/category-header-3.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
+                </div>
+                <div class="swiper-button-next bg-light border-radius-circle"></div>
+                <div class="swiper-button-prev bg-light border-radius-circle"></div>
+                <div class="swiper-pagination"></div>
 
+            </div>
+            <!-- Slider:end -->
+        </header>
         <!--Best Suggestions:start-->
         <div class="best-suggestions border-radius-2xl py-1">
             <!-- Slider:start -->
