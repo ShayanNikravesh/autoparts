@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>سوپر قالب فروشگاهی برگ شاپ</title>
+    <title>Auto Parts Store</title>
 
     <!--    Bootstrap 5 RTL-->
     <link rel="stylesheet" href="{{asset('user_assets/css/vendors/bootstrap/bootstrap.rtl.css')}}">
@@ -156,11 +156,11 @@
         <nav class="main-navbar navbar navbar-expand-lg navbar-light bg-light custom-box-shadow-s-1-bottom py-1">
             <!--    Container:start-->
             <div class="container d-flex justify-content-between align-items-center">
-                <!--        Navbar Right:start-->
+                <!--Navbar Right:start-->
                 <div class="navbar-right">
-                    <!--        Navbar Wrapper:start-->
+                    <!--Navbar Wrapper:start-->
                     <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-between align-items-center position-relative">
-                        <!--            Navbar Item:start-->
+                        <!--Navbar Item:start-->
                         <li class="nav-item d-flex justify-content-between align-items-center position-relative">
                             <!--begin::Svg Icon-->
                             <svg class="blur-up" xmlns="http://www.w3.org/2000/svg"
@@ -179,19 +179,18 @@
                             <span class="horizontal-line mx-1 me-2"></span>
                             <!--            Navbar Item:end-->
                         </li>
-                        <!--            Navbar Item:end-->
+                        <!--Navbar Item:end-->
                     </ul>
-                    <!--        Navbar Wrapper:end-->
+                    <!--Navbar Wrapper:end-->
                 </div>
-                <!--        Navbar Right:end-->
+                <!--Navbar Right:end-->
 
-                <!--        Navbar Left:start-->
+                <!--Navbar Left:start-->
                 <div class="navbar-left">
-                    <!--            Navbar Item:start-->
-                   
-                    <!--            Navbar Item:end-->
+                    <!--Navbar Item:start-->
+                    <!--Navbar Item:end-->
                 </div>
-                <!--        Navbar Left:end-->
+                <!--Navbar Left:end-->
             </div>
             <!--    Container:end-->
         </nav>
@@ -331,7 +330,7 @@
                         <div class="navbar-items-mobile-header d-flex justify-content-between align-items-center border-bottom-gray-300 p-3">
                             <!--                    Navbar Items Mobile Title:start-->
                             <div class="navbar-items-mobile-title">
-                                <h5 class="fw-bold">منوی برگ شاپ</h5>
+                                <h5 class="fw-bold">منوی فروشگاه</h5>
                             </div>
                             <!--                    Navbar Items Mobile Title:end-->
 
@@ -350,17 +349,10 @@
                                 <li class="border-bottom-gray-150 px-2 py-3">
                                     <a href="" class="fs-6 fw-bold d-block showSubMenu">
                                         <!--begin::Svg-->
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <rect x="0" y="0" width="24" height="24"/>
-                                                <path d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z"
-                                                      fill="#000000" opacity="0.3"/>
-                                                <path d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z M8,1 L16,1 C17.5187831,1 18.75,2.23121694 18.75,3.75 L18.75,20.25 C18.75,21.7687831 17.5187831,23 16,23 L8,23 C6.48121694,23 5.25,21.7687831 5.25,20.25 L5.25,3.75 C5.25,2.23121694 6.48121694,1 8,1 Z M9.5,1.75 L14.5,1.75 C14.7761424,1.75 15,1.97385763 15,2.25 L15,3.25 C15,3.52614237 14.7761424,3.75 14.5,3.75 L9.5,3.75 C9.22385763,3.75 9,3.52614237 9,3.25 L9,2.25 C9,1.97385763 9.22385763,1.75 9.5,1.75 Z"
-                                                      fill="#000000" fill-rule="nonzero"/>
-                                            </g>
-                                        </svg><!--end::Svg Icon-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+                                            <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
+                                        </svg>
+                                        <!--end::Svg Icon-->
                                         دسته بندی کالاها
                                         <i class="fa fa-angle-left float-end"></i>
                                     </a>
@@ -368,14 +360,12 @@
                                     <!--Navbar Items Child:start-->
                                     <ul class="first-child-parent p-3">
                                         <li class="fs-5 border-bottom-gray-300 pb-2 fw-bold text-center">
-                                            کالاهای دیجیتال
+                                            چراغ
                                         </li>
-                                        <li class="py-3"><a href="javascript:void(0)" class="fs-6 backToProductCategories"><i
-                                                class="fa fa-arrow-right me-2"></i>بازگشت به دسته بندی کالاها</a></li>
+                                        <li class="py-3"><a href="javascript:void(0)" class="fs-6 backToProductCategories"><i class="fa fa-arrow-right me-2"></i>بازگشت</a></li>
                                         <li class="border-bottom-gray-150 px-2 py-3">
-                                            <a href="javascript:;"
-                                               class="fs-6 fw-bold d-block" title="">
-                                                موبایل
+                                            <a href="javascript:;" class="fs-6 fw-bold d-block" title="">
+                                                موتور
                                                 <i class="fa fa-angle-left float-end"></i>
                                             </a>
                                         </li>
@@ -383,7 +373,55 @@
                                     <!--Navbar Items Child:end-->
 
                                 </li>
+                                <li class="border-bottom-gray-150 px-2 py-3">
+                                    <a href="" class="fs-6 fw-bold d-block showSubMenu">
+                                        <!--begin::Svg-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 16">
+                                            <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0"/>
+                                            <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1m0 5.586 7 7L13.586 9l-7-7H2z"/>
+                                        </svg>
+                                        <!--end::Svg Icon-->
+                                        برندها  
+                                        <i class="fa fa-angle-left float-end"></i>
+                                    </a>
 
+                                    <!--Navbar Items Child:start-->
+                                    <ul class="first-child-parent p-3">
+                                        <li class="fs-5 border-bottom-gray-300 pb-2 fw-bold text-center">
+                                            برندها
+                                        </li>
+                                        <li class="py-3"><a href="javascript:void(0)" class="fs-6 backToProductCategories"><i class="fa fa-arrow-right me-2"></i>بازگشت</a></li>
+                                        <li class="border-bottom-gray-150 px-2 py-3">
+                                            <a href="javascript:;" class="fs-6 fw-bold d-block" title="">
+                                            کیا
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!--Navbar Items Child:end-->
+
+                                </li>
+                                <li class="border-bottom-gray-150 px-2 py-3">
+                                    <a href="" class="fs-6 fw-bold d-block showSubMenu">
+                                        <!--begin::Svg-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                        </svg>
+                                        <!--end::Svg Icon-->
+                                        درباره ما 
+                                    </a>
+                                </li>
+                                <li class="border-bottom-gray-150 px-2 py-3">
+                                    <a href="" class="fs-6 fw-bold d-block showSubMenu">
+                                        <!--begin::Svg-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                                        </svg>
+                                        <!--end::Svg Icon-->
+                                        راهنمای خرید 
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <!--Navbar Items Mobile Body:end-->
@@ -434,7 +472,7 @@
             <div class="navbar-right">
                 <!--        Navbar Wrapper:start-->
                 <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-between align-items-center position-relative">
-                    <!--            Navbar Item:start-->
+                    <!--Navbar Item:start-->
                     <li class="nav-item d-flex justify-content-between align-items-center position-relative">
                         <a class="mx-2 py-2" href="" title="">
                             <!--begin::Svg Icon-->
@@ -456,7 +494,7 @@
                             <!--Navbar Item Child:start-->
                             <li class="nav-item-submenu-child">
                                 <a href="single-product.html" class="fw-bold" title="">
-                                    موبایل
+                                    چراغ
                                     <i class="fa fa-angle-left float-end"></i>
                                 </a>
                                 <!--Navbar Item Sub Child Wrapper:start-->
@@ -464,7 +502,7 @@
                                     <!--Navbar Item Sub Child:start-->
                                     <li>
                                         <a href="single-product.html" title="">
-                                            گوشی اپل
+                                            موتور 
                                         </a>
                                     </li>
                                     <!--Navbar Item Sub Child:end-->
@@ -476,9 +514,81 @@
                         <!--Navbar Child Wrapper:end-->
                         <!--Navbar Item:start-->
                         <span class="horizontal-line mx-1 me-2"></span>
-                        <!--            Navbar Item:end-->
+                        <!--Navbar Item:end-->
                     </li>
-                    <!--            Navbar Item:end-->
+                    <!--Navbar Item:end-->
+                    <!--Navbar Item:start-->
+                    <li class="nav-item d-flex justify-content-between align-items-center position-relative">
+                        <a class="mx-2 py-2" href="" title="">
+                            <!--begin::Svg Icon-->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 16">
+                                <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0"/>
+                                <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1m0 5.586 7 7L13.586 9l-7-7H2z"/>
+                            </svg>
+                            <!--end::Svg Icon-->
+                            برندها 
+                        </a>
+
+                        <!--Navbar Child Wrapper:start-->
+                        <ul class="position-absolute nav-item-submenu bg-white custom-box-shadow-s-2 border-radius-2xl">
+                            <!--Navbar Item Child:start-->
+                            <li class="nav-item-submenu-child">
+                                <a href="single-product.html" class="fw-bold" title="">
+                                    کیا
+                                </a>
+                            </li>
+                            <!--Navbar Item Child:end-->
+                        </ul>
+                        <!--Navbar Child Wrapper:end-->
+                        <!--Navbar Item:start-->
+                        <span class="horizontal-line mx-1 me-2"></span>
+                        <!--Navbar Item:end-->
+                    </li>
+                    <!--Navbar Item:end-->
+                    <!--Navbar Item:start-->
+                    <li class="nav-item d-flex justify-content-between align-items-center position-relative">
+                        <a class="mx-2 py-2" href="" title="">
+                            <!--begin::Svg Icon-->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
+                                <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+                                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+                            </svg>
+                            <!--end::Svg Icon-->
+                            مقالات
+                        </a>
+                        <!--Navbar Item:start-->
+                        <span class="horizontal-line mx-1 me-2"></span>
+                        <!--Navbar Item:end-->
+                    </li>
+                    <!--Navbar Item:end-->
+                    <!--Navbar Item:start-->
+                    <li class="nav-item d-flex justify-content-between align-items-center position-relative">
+                        <a class="mx-2 py-2" href="" title="">
+                            <!--begin::Svg Icon-->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                            </svg>
+                            <!--end::Svg Icon-->
+                            درباره ما
+                        </a>
+                        <!--Navbar Item:start-->
+                        <span class="horizontal-line mx-1 me-2"></span>
+                        <!--Navbar Item:end-->
+                    </li>
+                    <!--Navbar Item:end-->
+                    <li class="nav-item d-flex justify-content-between align-items-center position-relative">
+                        <a class="mx-2 py-2" href="" title="">
+                            <!--begin::Svg Icon-->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                            </svg>
+                            <!--end::Svg Icon-->
+                            راهنمای خرید
+                        </a>
+                    </li>
+                    <!--Navbar Item:end-->
                 </ul>
                 <!--        Navbar Wrapper:end-->
             </div>
