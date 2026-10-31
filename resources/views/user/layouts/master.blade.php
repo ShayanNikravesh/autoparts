@@ -56,7 +56,7 @@
                     <div class="top-mobile-navbar-middle d-flex justify-content-between align-items-center">
                         <!--            Logo:start-->
                         <a href="javascript:void(0)" class="navbar-brand">
-                            <img src="{{asset('user_assets/img/logo.png')}}" alt="لوگوی برگ شاپ" class="blur-up">
+                            <img src="{{asset('user_assets/img/logo.png')}}" alt="لوگو" class="blur-up">
                         </a>
                         <!--            Logo:end-->
                     </div>
@@ -126,13 +126,13 @@
             <div class="container d-flex justify-content-between align-items-center">
                 <!--        Top Navbar Right:start-->
                 <div class="top-nav-right d-flex justify-content-between align-items-center">
-                    <!--            Logo:start-->
+                    <!--Logo:start-->
                     <a href="javascript:void(0)" class="navbar-brand">
-                        <img src="{{asset('user_assets/img/logo-md.png')}}" alt="لوگوی برگ شاپ" class="blur-up">
+                        <img src="{{asset('user_assets/img/logo/Logo.png')}}" alt="لوگو" class="blur-up">
                     </a>
-                    <!--            Logo:end-->
+                    <!--Logo:end-->
 
-                    <!--            Search Form:start-->
+                    <!--Search Form:start-->
                     <form action="javascript:void(0)" class="position-relative">
                         <input class="form-control border-0 fs-6 fw-normal border-radius-xl bg-gray-150"
                                type="search" placeholder="جستجو">
@@ -140,7 +140,7 @@
                             <i class="fab fa-sistrix fw-md fs-5 gray-500 blur-up"></i>
                         </button>
                     </form>
-                    <!--            Search Form:end-->
+                    <!--Search Form:end-->
                 </div>
                 <!--        Top Navbar Right:end-->
 
@@ -244,11 +244,11 @@
     <div class="top-navbar navbar-expand-lg navbar-light py-2">
         <!--Container:start-->
         <div class="container d-flex justify-content-between align-items-center">
-            <!--        Top Navbar Right:start-->
+            <!--Top Navbar Right:start-->
             <div class="top-nav-right d-flex justify-content-between align-items-center">
-                <!--            Logo:start-->
+                <!--Logo:start-->
                 <a href="index.html" class="navbar-brand" title="">
-                    <img src="{{asset('user_assets/img/logo-md.png')}}" alt="لوگوی برگ شاپ">
+                    <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.png')}}" style="width :45px" alt="لوگو">
                 </a>
                 <!--Logo:end-->
                 
@@ -431,15 +431,15 @@
                 </div>
                 <!--        Top Mobile Navbar Right:end-->
 
-                <!--        Top Mobile Navbar Middle:start-->
+                <!--Top Mobile Navbar Middle:start-->
                 <div class="top-mobile-navbar-middle d-flex justify-content-between align-items-center">
-                    <!--            Logo:start-->
-                    <a href="index.html" class="navbar-brand pb-2" title="">
-                        <img src="{{asset('user_assets/img/logo.png')}}" alt="لوگوی برگ شاپ">
-                    </a>
-                    <!--            Logo:end-->
+                    <!--Logo:start-->
+                    {{-- <a href="index.html" class="navbar-brand pb-2" title="">
+                        <img src="{{asset('user_assets/img/logo/Logo2.png')}}" alt="لوگو">
+                    </a> --}}
+                    <!--Logo:end-->
                 </div>
-                <!--        Top Mobile Navbar Middle:end-->
+                <!--Top Mobile Navbar Middle:end-->
 
                 <!--Top Mobile Navbar Left:start-->
                 <div class="top-mobile-navbar-left">
@@ -455,6 +455,9 @@
                             </g>
                         </svg><!--end::Svg Icon-->
                     </a> --}}
+                    <a href="index.html" class="navbar-brand pb-2" title="">
+                        <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.png')}}" style="width :45px" alt="لوگو">
+                    </a>
                 </div>
                 <!--Top Mobile Navbar Left:end-->
             </div>
@@ -643,7 +646,7 @@
             <!--            Footer Top Detail:start-->
             <div class="footer-top-detial d-flex justify-content-between align-items-center">
                 <div class="">
-                    <a href="" title=""><img src="{{asset('user_assets/img/logo-md.png')}}" alt=""></a>
+                    <a href="" title=""><img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.png')}}" style="width :45px" alt=""></a>
                     <p class="mt-2 fs-7">تلفن پشتیبانی : 05144445697</p>
                 </div>
                 <a href="#top" class="back-to-top border-radius-xl px-3 py-2 gray-600 fs-7">
