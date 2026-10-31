@@ -128,7 +128,7 @@
                 <div class="top-nav-right d-flex justify-content-between align-items-center">
                     <!--Logo:start-->
                     <a href="javascript:void(0)" class="navbar-brand">
-                        <img src="{{asset('user_assets/img/logo/Logo.png')}}" alt="لوگو" class="blur-up">
+                        <img src="{{asset('user_assets/img/logo/Logo.PNG')}}" alt="لوگو" class="blur-up">
                     </a>
                     <!--Logo:end-->
 
@@ -248,7 +248,7 @@
             <div class="top-nav-right d-flex justify-content-between align-items-center">
                 <!--Logo:start-->
                 <a href="index.html" class="navbar-brand" title="">
-                    <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.png')}}" style="width :45px" alt="لوگو">
+                    <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.PNG')}}" style="width :45px" alt="لوگو">
                 </a>
                 <!--Logo:end-->
                 
@@ -456,7 +456,7 @@
                         </svg><!--end::Svg Icon-->
                     </a> --}}
                     <a href="index.html" class="navbar-brand pb-2" title="">
-                        <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.png')}}" style="width :45px" alt="لوگو">
+                        <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.PNG')}}" style="width :45px" alt="لوگو">
                     </a>
                 </div>
                 <!--Top Mobile Navbar Left:end-->
@@ -646,7 +646,7 @@
             <!--            Footer Top Detail:start-->
             <div class="footer-top-detial d-flex justify-content-between align-items-center">
                 <div class="">
-                    <a href="" title=""><img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.png')}}" style="width :45px" alt=""></a>
+                    <a href="" title=""><img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.PNG')}}" style="width :45px" alt=""></a>
                     <p class="mt-2 fs-7">تلفن پشتیبانی : 05144445697</p>
                 </div>
                 <a href="#top" class="back-to-top border-radius-xl px-3 py-2 gray-600 fs-7">
