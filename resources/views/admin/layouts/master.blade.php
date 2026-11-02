@@ -283,7 +283,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				responsive: true
 			})
 		</script>
-		{{-- @include('sweetalert::alert') --}}
+		@sweetAlert
 	</body>
 	<!--end::Body-->
 </html>
