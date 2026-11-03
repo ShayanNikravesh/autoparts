@@ -49,11 +49,11 @@ function generateRandomDigit ($length = 8):int
     return $codeRandom;
 }
 
-function priceFormatter($price) {
+function priceFormatter(int $price) {
     return number_format($price) . ' تومان';
 }
 
-function getpercent($value){
+function getpercent(array $value){
     if ($value['price']==0 || $value['price_discounted']==0){
         return false;
     }
