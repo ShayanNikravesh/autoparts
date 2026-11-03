@@ -4,6 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+// use Illuminate\Contracts\Validation\Validator;
+// use RealRashid\SweetAlert\Facades\Alert;
 
 class StoreTitleRequest extends FormRequest
 {
@@ -27,4 +29,11 @@ class StoreTitleRequest extends FormRequest
             'english_title' => ['required'],
         ];
     }
+
+    // protected function failedValidation(Validator $validator)
+    // {
+    //     Alert::error('عملیات ناموفق');
+
+    //     parent::failedValidation($validator);
+    // }
 }
