@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -28,3 +29,6 @@ Route::post('article/ChangeStatus/{id}',[ArticleController::class,'ChangeStatus'
 
 //Store Photo
 Route::post('storePhoto',[ArticleController::class,'storePhoto'])->name('store_article_photo');
+
+//Delete Photo
+Route::delete('photo/{id}',[PhotoController::class,'delete'])->name('delete_photo');

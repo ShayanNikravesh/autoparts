@@ -52,7 +52,7 @@
                                 <br>
                                 <div class="image-input image-input-outline">
                                     <div class="image-input-wrapper" style="background-image: url('{{asset($photo->src)}}');"></div>
-                                    <a class="btn btn-hover-icon-danger" href="" method="POST" data-toggle="tooltip" data-placement="bottom" title="حذف عکس" data-confirm-delete="true">
+                                    <a class="btn btn-hover-icon-danger" href="{{ route('delete_photo',$photo->id) }}" method="POST" data-toggle="tooltip" data-placement="bottom" title="حذف عکس" data-confirm-delete="true">
                                         <i class="fa fa-trash"></i></button>
                                     </a>
                                 </div>
