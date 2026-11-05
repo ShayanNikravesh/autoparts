@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\Pivot;
+
+class ArticlePhoto extends Pivot
+{
+    protected $table = 'article_photo';
+
+    public function article(): BelongsTo
+    {
+        return $this->belongsTo(Article::class);
+    }
+
+    public function photo(): BelongsTo
+    {
+        return $this->belongsTo(Photo::class);
+    }
+    
+}
+
