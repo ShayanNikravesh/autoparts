@@ -78,8 +78,8 @@ return [
     */
 
     'button_text' => [
-        'confirm' => env('SWEET_ALERT_CONFIRM_BUTTON_TEXT', 'OK'),
-        'cancel' => env('SWEET_ALERT_CANCEL_BUTTON_TEXT', 'Cancel'),
+        'confirm' => env('SWEET_ALERT_CONFIRM_BUTTON_TEXT', 'تایید'),
+        'cancel' => env('SWEET_ALERT_CANCEL_BUTTON_TEXT', 'لغو'),
         'deny' => env('SWEET_ALERT_DENY_BUTTON_TEXT', 'Deny'),
     ],
 
@@ -156,9 +156,9 @@ return [
         'icon' => 'warning',
         'title' => 'Are you sure?',
         'text' => 'This cannot be undone.',
-        'confirm_button_text' => 'Yes, delete it!',
+        'confirm_button_text' => 'بله',
         'confirm_button_color' => '#d33',
-        'cancel_button_text' => 'Cancel',
+        'cancel_button_text' => 'خیر',
         'show_close_button' => false,
         'show_cancel_button' => true,
         'show_loader_on_confirm' => true,
