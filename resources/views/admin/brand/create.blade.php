@@ -54,11 +54,11 @@
                                     <div class="form-group row">
                                         <label>عنوان :</label>
                                         <div class="col-5">
-                                            <input class="form-control form-control-solid" type="text" name="title" placeholder="عنوان را وارد کنید."/>
+                                            <input class="form-control" type="text" name="title" placeholder="عنوان را وارد کنید." >
                                         </div>
                                         <label>عنوان انگلیسی :</label>
                                         <div class="col-5">
-                                            <input class="form-control form-control-solid" type="text" name="english_title" placeholder="عنوان انگلیسی را وارد کنید."/>
+                                            <input class="form-control" type="text" name="english_title" placeholder="عنوان انگلیسی را وارد کنید." >
                                         </div>
                                     </div>
                                 </div>
