@@ -53,20 +53,19 @@
                                 <div class="my-5">
                                     <div class="form-group row">
                                         <label>عنوان :</label>
-                                        <div class="col-5">
-                                            <input class="form-control form-control-solid" type="text" name="title"/>
+                                        <div class="col-4">
+                                            <input class="form-control" type="text" name="title" placeholder="عنوان را وارد کنید...">
                                         </div>
                                         <label>عنوان انگلیسی :</label>
-                                        <div class="col-5">
-                                            <input class="form-control form-control-solid" type="text" name="english_title"/>
+                                        <div class="col-4">
+                                            <input class="form-control" type="text" name="english_title" placeholder="عنوان انگلیسی را وارد کنید...">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         @if ($parent_categories->isNotEmpty())
                                             <label class="col-3">دسته والد</label>
-                                            <div class="col-7">
-                                                <select class="form-control form-control-solid" name="parent_id">
-                                                    <option value="">انتخاب کنید.</option>
+                                            <div class="col-5">
+                                                <select class="form-control selectpicker" name="parent_id" title="انتخاب کنید." data-live-search="true">
                                                     @foreach ($parent_categories as $category)
                                                         <option value="{{$category->id}}">{{$category->title}}</option>
                                                     @endforeach
