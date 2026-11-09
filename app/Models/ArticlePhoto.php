@@ -8,17 +8,6 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class ArticlePhoto extends Pivot
 {
-    protected $table = 'article_photo';
-
-    public function article(): BelongsTo
-    {
-        return $this->belongsTo(Article::class);
-    }
-
-    public function photo(): BelongsTo
-    {
-        return $this->belongsTo(Photo::class);
-    }
-    
+    protected $table = 'article_photo';    
 }
 

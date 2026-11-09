@@ -9,6 +9,6 @@ class Article extends Model
 {
     public function photo(): BelongsToMany
     {
-        return $this->belongsToMany(Photo::class)->using(ArticlePhoto::class);
+        return $this->belongsToMany(Photo::class)->using(ArticlePhoto::class)->withTimestamps();
     }
 }

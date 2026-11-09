@@ -99,6 +99,7 @@ $('div#upload_product_photo').dropzone({
     },
 });
 
+const article_id = $('#input_article_id').val();
 $('div#upload_article_photo').dropzone({
     url: route('store_article_photo'),
     paramName: "article_photo",
@@ -110,11 +111,36 @@ $('div#upload_article_photo').dropzone({
         article_id: $('#input_article_id').val(),
             _token: $('meta[name="csrf-token"]').attr('content') // اضافه کردن CSRF token
     },        
-    accept: function(file, done) {
-        done();
+    success: function(file, response) {
+
+        //Refresh Photos
+        $('#div' + article_id).load(document.URL + ' #div' + article_id)
+
+        //Toast
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: response.icon,
+            title: response.message,
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 2000
+        });
+
     },
     error: function (file, res) {
         let response;
+
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'error',
+            title: 'فایل ذخیره نشد.',
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 2000
+        });
+        
         try {
             response = JSON.parse(res);
         } catch (e) {

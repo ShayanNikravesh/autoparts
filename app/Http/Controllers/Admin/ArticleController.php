@@ -108,14 +108,22 @@ class ArticleController extends Controller
      */
     public function destroy(string $id)
     {
-        $article = Article::with('photo')->findOrFail($id);
 
-        if($article){
-            foreach($article->photo as $photo){
-                $photo = Photo::findorFail($photo->id);
-                File::delete(public_path($photo->src));
-                $photo->forceDelete();
-            }    
+        $article = Article::findOrFail($id);
+
+        //Article Photo
+        $photo = $article->photo()->first();
+
+        if($photo){
+            
+            //Delete File
+            File::delete(public_path($photo->src));
+
+            //Delete Intermediate 
+            $photo->article()->detach($id);
+            
+            //Delete Data
+            $photo->forceDelete();
         }
 
         $article->forceDelete();
@@ -130,23 +138,47 @@ class ArticleController extends Controller
 
         if($request->hasFile('article_photo')){
 
-            $article = Article::findOrFail($request->article_id);
-            $existing_photo = $article->photo()->first();
-            if($existing_photo){
-                File::delete(public_path($existing_photo->src));
-                $existing_photo->forceDelete();
+            $id = $request->article_id;
+
+            //Get Old Photo
+            $article = Article::findOrFail($id);
+            $old_photo = $article->photo()->first();
+
+            if($old_photo){
+                
+                //Delete File
+                File::delete(public_path($old_photo->src));
+
+                //Delete Intermediate 
+                $old_photo->article()->detach($id);
+                
+                //Delete Data
+                $old_photo->forceDelete();
             }
 
+            //File name
             $fileName = time().'_'.$request->article_photo->getClientOriginalName();
-            $filePath = $request->article_photo->storeAs('articles_photos',$fileName,'public');
             $suffix_photo = pathinfo($_FILES['article_photo']['name'], PATHINFO_EXTENSION);
+
+            //Storing File
+            $filePath = $request->article_photo->storeAs('articles',$fileName,'public');
+
+            //Storing Data
             $photo = new Photo();
             $photo->name = $fileName;
             $photo->src = 'storage/'.$filePath;
             $photo->suffix = $suffix_photo;
             $photo->save();
 
+            //Article Photo
             $photo->article()->attach($article);
+
+            return response()->json([
+                'success' => true,
+                'icon' => 'success',
+                'message' => 'عکس ذخیره شد.',
+            ]);
+            
         }
     }
 

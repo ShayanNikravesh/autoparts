@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </form>
-            <div class="card card-custom gutter-b">
+            <div class="card card-custom gutter-b" id="div{{$article->id}}">
                 <div class="card-header">
                     <h3 class="card-title">مدیریت تصاویر</h3>
                 </div>
