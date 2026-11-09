@@ -36,44 +36,68 @@
 //     },
 // });
 
-// $('div#upload_product_photo').dropzone({
-//     url: route('photo.store'),
-//     paramName: "product_photo",
-//     maxFiles: 5,
-//     maxFilesize: 1, // MB
-//     addRemoveLinks: true,
-//     acceptedFiles: "image/*",
-//     params: {
-//         product_id: $('#input_product_id').val(),
-//         _token: $('meta[name="csrf-token"]').attr('content') // اضافه کردن CSRF token
-//     },        
-//     accept: function(file, done) {
-//         // var product_id = $('#input_product_id').val(); // مقداردهی product_id
-//         // $('#' + product_id).load(document.URL + ' #' + product_id);
-//         done();
-//     },
-//     error: function (file, res) {
-//         let response;
-//         try {
-//             response = JSON.parse(res);
-//         } catch (e) {
-//             response = res;
-//         }
-//         if (file.previewElement) {
-//             file.previewElement.classList.add("dz-error");
-//             if (typeof response !== "string" && response.error) {
-//                 response = message.error;
-//             } else if (typeof response !== "string" && response.message) {
-//                 response = response.message;
-//             }
-//             for (let node of file.previewElement.querySelectorAll(
-//                 "[data-dz-errormessage]"
-//             )) {
-//                 node.textContent = response;
-//             }
-//         }
-//     },
-// });
+const product_id = $('#input_product_id').val();
+$('div#upload_product_photo').dropzone({
+    url: route('store_product_photo'),
+    paramName: "product_photo",
+    maxFiles: 5,
+    maxFilesize: 1, // MB
+    addRemoveLinks: true,
+    acceptedFiles: "image/*",
+    params: {
+        product_id: product_id,
+        //CSRF Token
+        _token: $('meta[name="csrf-token"]').attr('content')
+    },        
+    success: function (file, response) {
+
+        //Refresh Photos
+        $('#div' + product_id).load(document.URL + ' #div' + product_id)
+
+        //Toast
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: response.icon,
+            title: response.message,
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 2000
+        });
+    },
+    error: function (file, res) {
+        let response;
+
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'error',
+            title: 'فایل ذخیره نشد.',
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 2000
+        });
+
+        try {
+            response = JSON.parse(res);
+        } catch (e) {
+            response = res;
+        }
+        if (file.previewElement) {
+            file.previewElement.classList.add("dz-error");
+            if (typeof response !== "string" && response.error) {
+                response = message.error;
+            } else if (typeof response !== "string" && response.message) {
+                response = response.message;
+            }
+            for (let node of file.previewElement.querySelectorAll(
+                "[data-dz-errormessage]"
+            )) {
+                node.textContent = response;
+            }
+        }
+    },
+});
 
 $('div#upload_article_photo').dropzone({
     url: route('store_article_photo'),

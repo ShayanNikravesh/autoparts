@@ -30,10 +30,4 @@ class StoreTitleRequest extends FormRequest
         ];
     }
 
-    // protected function failedValidation(Validator $validator)
-    // {
-    //     Alert::error('عملیات ناموفق');
-
-    //     parent::failedValidation($validator);
-    // }
 }

@@ -86,20 +86,22 @@ class BrandController extends Controller
      */
     public function destroy(string $id)
     {
-        // $brand = Brand::with('products')->findOrFail($id);
+        $brand = Brand::findOrFail($id);
 
-        // if(count($brand->products) == 0){
-            $brand = Brand::findOrFail($id);
+        $product = $brand->products()->first();
+
+        if(empty($product)){
+            
             $brand->forceDelete();
 
             Alert::success('عملیات موفق','برند حذف شد.');
             return redirect()->back();
 
-        // }else
-        // {
-        //     Alert::warning('اخطار','برای این برند محصول ثبت شده است.');
-        //     return redirect()->back();
-        // }
+        }else
+        {
+            Alert::warning('اخطار','برای این برند محصول ثبت شده است.');
+            return redirect()->back();
+        }
     }
 
     public function ChangeStatus(string $id)

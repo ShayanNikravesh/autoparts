@@ -21,12 +21,6 @@ function FetchStatus (string $status){
             return 'ناموفق';
         default:
             return "نامشخص";
-        case '0':
-            return 'کاربر';
-        case '1':
-            return 'مدیر';
-        case '2':
-            return 'اپراتور';
     }
 }
 
