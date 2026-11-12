@@ -36,27 +36,27 @@
                 <div class="card-header">
                     <h3 class="card-title">افزودن محصول</h3>
                 </div>
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger text-center">{{$error}}</div>
+                    @endforeach
+                @endif
                 <!--begin::Form-->
                 <form class="form" method="post" action="{{route('products.store')}}" id="kt_form">
                     @csrf
                     <div class="card-body">
-                        @if ($errors->any())
-                            @foreach ($errors->all() as $error)
-                                <div class="alert alert-danger text-center">{{$error}}</div>
-                            @endforeach
-                        @endif
-                        <div class="form-group row">
-                            <div class="col-lg-6">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-lg-4">
                                 <label>عنوان:</label>
                                 <input type="text" name="title" class="form-control" placeholder="عنوان را وارد کنید...">
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <label>عنوان انگلیسی:</label>
                                 <input type="text" name="english_title" class="form-control" placeholder="عنوان انگلیسی را وارد کنید...">
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-lg-4">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-lg-3">
                                 <label class="text-right">دسته بندی :</label>
                                 <select name="category" class="form-control text-right selectpicker" title="انتخاب کنید." data-live-search="true">
                                     @foreach ($categories as $category)
@@ -64,7 +64,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <label class="text-right">برند :</label>
                                 <select name="brand" class="form-control text-right selectpicker" title="انتخاب کنید." data-live-search="true">
                                     @foreach ($brands as $brand)
@@ -72,7 +72,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <label class="text-right">وضعیت:</label>
                                 <select name="status" class="form-control text-right selectpicker" title="انتخاب کنید.">
                                     <option value="active">فعال</option>
@@ -80,21 +80,21 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-lg-4">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-lg-3">
                                 <label>قیمت:</label>
                                 <input type="number" name="price" class="form-control" placeholder="قیمت را وارد کنید..."  min="100000" step="50000">
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <label>قیمت با تخفیف:</label>
                                 <input type="number" name="price_discounted" class="form-control" placeholder="قیمت با تخفیف را وارد کنید..." step="50000" value="0">
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <label>موجودی:</label>
                                 <input type="number" name="stock" class="form-control" min="0" step="1" value="0">
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="form-group row justify-content-center">
                             <div class="col-lg-12">
                                 <label class="text-right"> مشخصات و توضیحات :</label>
                                 <textarea class="summernote" name="description" style="display: none;"></textarea>

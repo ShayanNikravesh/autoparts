@@ -146,9 +146,29 @@ function ChangeStatusManager(id){
         success: function (response) {
             $('#' + id).load(document.URL + ' #' + id)
             $('#div' + id).load(document.URL + ' #div' + id)
+
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: response.message,
+                showConfirmButton: false,
+                showCloseButton: true,
+                timer: 1500
+            });
+
         },
         error: function (error) {
             console.log(error)
+
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'error',
+                title: 'تغییر وضعیت انجام نشد.',
+                showConfirmButton: false,
+                timer: 1500
+            });
         },
     });
 
@@ -165,9 +185,29 @@ function ChangeLevelManager(id){
         success: function (response) {
             $('#1' + id).load(document.URL + ' #1' + id)
             $('#div2' + id).load(document.URL + ' #div2' + id)
+
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: response.message,
+                showConfirmButton: false,
+                showCloseButton: true,
+                timer: 1500
+            });
         },
         error: function (error) {
             console.log(error)
+
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'error',
+                title: 'تغییر سطح انجام نشد.',
+                showConfirmButton: false,
+                timer: 1500
+            });
+
         },
     });
 

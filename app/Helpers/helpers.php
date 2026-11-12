@@ -3,6 +3,8 @@
 // use App\Models\Manager;
 // use Illuminate\Support\Facades\Auth;
 
+use App\Models\Manager;
+
 function FetchStatus (string $status){
     switch ($status) {
         case 'active':
@@ -13,7 +15,7 @@ function FetchStatus (string $status){
             return 'ناموجود';
         case 'stop_selling':
             return 'توقف فروش';
-        case'banned':
+        case'suspend':
             return 'مسدود';    
         case 'success':
             return 'موفق';
@@ -54,16 +56,18 @@ function getpercent(array $value){
     return round( (($value['price']-$value['price_discounted']) / $value['price_discounted']) * 100 );
 }
 
-// function getPhoto(int $id){
-//     $manager = Manager::find($id , 'id');
-//     $existing_photo = $manager->photos()->first();
-//     if(!empty($existing_photo->src)){
-//         return $existing_photo->src;
-//     }else{
-//         return 'admin-assets/media/users/blank.png';
-//     }
+function getPhoto(int $id){
     
-// }
+    $manager = Manager::find($id,'id');
+    $photo = $manager->photo()->first();
+
+    if(empty($photo)){
+        return 'admin_assets/media/users/blank.png';
+    }else{
+        return $photo->src;
+    }
+    
+}
 
 function ChangeStatus(string $status){
     $status = $status === 'active' ? 'inactive' : 'active';

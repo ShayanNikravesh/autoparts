@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ManagerController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Models\Photo;
@@ -12,11 +13,15 @@ Route::get('/', function () {
     return view('admin.index');
 });
 
-//change Status
+//Change Status
 Route::post('category/ChangeStatus/{id}',[CategoryController::class,'ChangeStatus'])->name('change_Status_category');
 Route::post('brand/ChangeStatus/{id}',[BrandController::class,'ChangeStatus'])->name('change_Status_brand');
 Route::post('article/ChangeStatus/{id}',[ArticleController::class,'ChangeStatus'])->name('change_Status_article');
-Route::post('product/changeStatus/{id}/{status}',[ProductController::class,'changeStatus'])->name('change_Status_product');
+Route::post('manager/ChangeStatus/{id}',[ManagerController::class,'changeStatus'])->name('change_Status_manager');
+Route::post('product/ChangeStatus/{id}/{status}',[ProductController::class,'changeStatus'])->name('change_Status_product');
+
+//Change Level
+Route::post('manager/ChangeLevel/{id}',[ManagerController::class,'ChangeLevel'])->name('change_Level_manager');
 
 //Show Photo
 Route::get('product/{id}/photos',[ProductController::class,'showProductPhoto'])->name('show_product_photo');
@@ -43,4 +48,7 @@ Route::resources([
     //Product
     'products' => ProductController::class,
     
+    //Manager
+    'managers' => ManagerController::class,
+
 ]);
