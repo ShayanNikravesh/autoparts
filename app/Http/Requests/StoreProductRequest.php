@@ -27,13 +27,14 @@ class StoreProductRequest extends FormRequest
         
         return [
             'title' => ['required', 'string', 'regex:/^[0-9\-\_ پچجحخهعغفقثصضشسیبلاتنمکگوئدذرزطظژآ]+$/i'],
-            'english_title' => ['required','regex:/^[A-Za-z0-9\-\_\/]+$/i'],
-            'category'=>['required'],
-            'brand'=>['required'],
-            'price'=>['required','numeric'],
-            'price_discounted'=>['numeric'],
-            'description'=>['required'],
-            'review'=>['required'],
+            'english_title' => ['required','regex:/^[A-Za-z0-9\-\_\/]+$/i','string'],
+            'category'=>['required','numeric'],
+            'brand'=>['required','numeric'],
+            'price'=>['required','numeric','integer','min:0'],
+            'price_discounted'=>['numeric','integer','min:0'],
+            'status'=>['required','in:active,inactive,unavailable,stop_selling'],
+            'description'=>['required','string'],
+            'review'=>['required','string'],
             'stock'=>['required','numeric'],
         ];
         

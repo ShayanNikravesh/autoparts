@@ -79,10 +79,10 @@
 										<span id="div{{$category->id}}">
 											@switch($category->status)
 												@case('active')
-													<button class="badge bg-light-success text-dark w-50 btn" onclick="ChangeStatusCategory('{{$category->id}}')"><span id="{{$category->id}}">{{FetchStatus($category->status)}}</span></button>
+													<button class="badge bg-light-success text-dark w-75 btn" onclick="ChangeStatusCategory('{{$category->id}}')"><span id="{{$category->id}}">{{FetchStatus($category->status)}}</span></button>
 													@break
 												@case('inactive')
-													<button class="badge bg-light-danger text-dark w-50 btn" onclick="ChangeStatusCategory('{{$category->id}}')"><span id="{{$category->id}}">{{FetchStatus($category->status)}}</span></button>
+													<button class="badge bg-light-danger text-dark w-75 btn" onclick="ChangeStatusCategory('{{$category->id}}')"><span id="{{$category->id}}">{{FetchStatus($category->status)}}</span></button>
 													@break
 												@default
 											@endswitch

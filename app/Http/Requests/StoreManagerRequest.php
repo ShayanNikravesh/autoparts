@@ -28,7 +28,7 @@ class StoreManagerRequest extends FormRequest
             'email'=>['required','string','email','max:255','unique:managers,email'],
             'mobile'=>['required','regex:/^(\+98|98|0)9\d{9}$/','string'],
             'password'=>['required','min:6','confirmed','string'],
-            'level'=>['required','numeric'],
+            'level'=>['required','in:manager,operator'],
         ];
     }
 }

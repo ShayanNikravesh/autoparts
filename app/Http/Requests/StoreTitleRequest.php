@@ -25,8 +25,8 @@ class StoreTitleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required'],
-            'english_title' => ['required'],
+            'title' => ['required','string','regex:/^[0-9\-\_ پچجحخهعغفقثصضشسیبلاتنمکگوئدذرزطظژآ]+$/i'],
+            'english_title' => ['required','string','regex:/^[A-Za-z0-9\-\_\/]+$/i','string'],
         ];
     }
 

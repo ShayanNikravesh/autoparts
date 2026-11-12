@@ -47,17 +47,17 @@
                     <div class="card-body">
                         <div class="form-group row justify-content-center">
                             <div class="col-lg-4">
-                                <label>عنوان:</label>
+                                <label><span class="text-danger">*</span> عنوان :</label>
                                 <input type="text" name="title" class="form-control" placeholder="عنوان را وارد کنید...">
                             </div>
                             <div class="col-lg-4">
-                                <label>عنوان انگلیسی:</label>
+                                <label><span class="text-danger">*</span> عنوان انگلیسی :</label>
                                 <input type="text" name="english_title" class="form-control" placeholder="عنوان انگلیسی را وارد کنید...">
                             </div>
                         </div>
                         <div class="form-group row justify-content-center">
                             <div class="col-lg-3">
-                                <label class="text-right">دسته بندی :</label>
+                                <label class="text-right"><span class="text-danger">*</span> دسته بندی :</label>
                                 <select name="category" class="form-control text-right selectpicker" title="انتخاب کنید." data-live-search="true">
                                     @foreach ($categories as $category)
                                         <option value="{{$category->id}}">{{$category->title}}</option>
@@ -65,7 +65,7 @@
                                 </select>
                             </div>
                             <div class="col-lg-3">
-                                <label class="text-right">برند :</label>
+                                <label class="text-right"><span class="text-danger">*</span> برند :</label>
                                 <select name="brand" class="form-control text-right selectpicker" title="انتخاب کنید." data-live-search="true">
                                     @foreach ($brands as $brand)
                                         <option value="{{$brand->id}}">{{$brand->title}}</option>
@@ -73,40 +73,43 @@
                                 </select>
                             </div>
                             <div class="col-lg-3">
-                                <label class="text-right">وضعیت:</label>
+                                <label class="text-right"><span class="text-danger">*</span> وضعیت :</label>
                                 <select name="status" class="form-control text-right selectpicker" title="انتخاب کنید.">
                                     <option value="active">فعال</option>
                                     <option value="inactive">غیرفعال</option>
+                                    <option value="stop_selling">توقف فروش</option>
+                                    <option value="unavailable">ناموجود</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group row justify-content-center">
                             <div class="col-lg-3">
-                                <label>قیمت:</label>
+                                <label><span class="text-danger">*</span> قیمت :</label>
                                 <input type="number" name="price" class="form-control" placeholder="قیمت را وارد کنید..."  min="100000" step="50000">
                             </div>
                             <div class="col-lg-3">
-                                <label>قیمت با تخفیف:</label>
+                                <label><span class="text-danger">*</span> قیمت با تخفیف :</label>
                                 <input type="number" name="price_discounted" class="form-control" placeholder="قیمت با تخفیف را وارد کنید..." step="50000" value="0">
                             </div>
                             <div class="col-lg-3">
-                                <label>موجودی:</label>
+                                <label><span class="text-danger">*</span> موجودی :</label>
                                 <input type="number" name="stock" class="form-control" min="0" step="1" value="0">
                             </div>
                         </div>
                         <div class="form-group row justify-content-center">
                             <div class="col-lg-12">
-                                <label class="text-right"> مشخصات و توضیحات :</label>
+                                <label class="text-right"><span class="text-danger">*</span> مشخصات و توضیحات :</label>
                                 <textarea class="summernote" name="description" style="display: none;"></textarea>
                             </div>
                             <div class="col-lg-12">
-                                <label class="text-right">نقد و بررسی :</label>
+                                <label class="text-right"><span class="text-danger">*</span> نقد و بررسی :</label>
                                 <textarea class="summernote" name="review" style="display: none;"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-success mr-2">ثبت</button>
+                        <button type="submit" class="btn btn-primary mr-2">ثبت</button>
+                        <button type="reset" class="btn btn-secondary">پاک کردن</button>
                     </div>
                 </form>
                 <!--end::Form-->

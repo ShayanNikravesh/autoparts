@@ -81,8 +81,8 @@
                                 <div class="col-lg-3">
                                     <label for="exampleSelect"><span class="text-danger">*</span>سطح : </label>
                                     <select class="form-control selectpicker" id="exampleSelect" name="level" title="انتخاب کنید.">
-                                        <option value="1">مدیر</option>
-                                        <option value="2">اپراتور</option>
+                                        <option value="manager">مدیر</option>
+                                        <option value="operator">اپراتور</option>
                                     </select>
                                 </div>
                             </div>

@@ -43,6 +43,7 @@ class ProductController extends Controller
         $code = random_int(111111111,999999999);
         $tracking_code = 'BA-'.$code;
 
+        dd($request);
         $product = new Product();
         $product->title = $request->title; 
         $product->english_title = $request->english_title;
@@ -156,6 +157,12 @@ class ProductController extends Controller
     {
         if($request->hasFile('product_photo')){
 
+            //Photo Validation
+            $request -> validate([
+                'product_photo'=>['mimes:jpg,jpeg,png','max:1024']
+            ]);
+            
+            //ID
             $id = $request->product_id;
 
             //Product Photos Count 

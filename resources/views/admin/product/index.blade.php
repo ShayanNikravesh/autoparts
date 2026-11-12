@@ -98,7 +98,7 @@
 												</button>
 												<div class="dropdown-menu btn-group-sm" style="z-index: 200" aria-labelledby="ChangeStatusProduct">
 													@if ($product->status !== 'active')
-														<button class="dropdown-item bg-success btn text" onclick="ChangeStatusProduct('{{$product->id}}','active')">فعال</button>
+														<button class="dropdown-item bg-success btn" onclick="ChangeStatusProduct('{{$product->id}}','active')">فعال</button>
 													@endif
 													@if ($product->status !== 'inactive')
 														<button class="dropdown-item bg-danger btn" onclick="ChangeStatusProduct('{{$product->id}}','inactive')">غیر فعال</button>

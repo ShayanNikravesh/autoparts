@@ -35,44 +35,45 @@
                 <div class="card-header">
                     <h3 class="card-title">افزودن مقاله</h3>
                 </div>
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger text-center">{{$error}}</div>
+                    @endforeach
+                @endif
                 <!--begin::Form-->
                 <form class="form" method="post" action="{{route('articles.store')}}" id="kt_form">
                     @csrf
                     <div class="card-body">
-                        @if ($errors->any())
-                            @foreach ($errors->all() as $error)
-                                <div class="alert alert-danger text-center">{{$error}}</div>
-                            @endforeach
-                        @endif
-                        <div class="form-group row">
-                            <div class="col-lg-6">
-                                <label>نام :</label>
+                        <div class="form-group row justify-content-center">
+                            <div class="col-lg-4">
+                                <label><span class="text-danger">*</span> نام :</label>
                                 <input type="text" name="first_name" class="form-control" placeholder="نام نویسنده را وارد کنید...">
                             </div>
-                            <div class="col-lg-6">
-                                <label>نام خانوادگی :</label>
+                            <div class="col-lg-4">
+                                <label><span class="text-danger">*</span> نام خانوادگی  :</label>
                                 <input type="text" name="last_name" class="form-control" placeholder="نام خانوادگی را وارد کنید...">
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-lg-6">
-                                <label>عنوان :</label>
+                        <div class="form-group row justify-content-center">
+                            <div class="col-lg-4">
+                                <label><span class="text-danger">*</span> عنوان :</label>
                                 <input type="text" name="title" class="form-control" placeholder="عنوان را وارد کنید...">
                             </div>
-                            <div class="col-lg-6">
-                                <label>عنوان انگلیسی :</label>
+                            <div class="col-lg-4">
+                                <label><span class="text-danger">*</span> عنوان انگلیسی :</label>
                                 <input type="text" name="english_title" class="form-control" placeholder="عنوان انگلیسی را وارد کنید...">
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <label class="text-right"> متن مقاله :</label>
+                        <div class="form-group row justify-content-center">
+                            <div class="col-lg-11">
+                                <label class="text-right"><span class="text-danger">*</span> متن مقاله :</label>
                                 <textarea class="summernote" name="article" style="display: none;"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-success mr-2">ثبت</button>
+                        <button type="submit" class="btn btn-primary mr-2">ثبت</button>
+                        <button type="reset" class="btn btn-secondary">پاک کردن</button>
                     </div>
                 </form>
                 <!--end::Form-->

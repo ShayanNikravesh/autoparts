@@ -40,9 +40,9 @@ class ArticleController extends Controller
         Alert::error('عملیات ناموفق');
 
         $request->validate([
-            'first_name' => ['required'],
-            'last_name' => ['required'],
-            'article' => ['required'],
+            'first_name' => ['required','string'],
+            'last_name' => ['required','string'],
+            'article' => ['required','string'],
         ]);
 
         $article = new Article();
@@ -138,6 +138,12 @@ class ArticleController extends Controller
 
         if($request->hasFile('article_photo')){
 
+            //Photo Validation
+            $request -> validate([
+                'article_photo'=>['mimes:jpg,jpeg,png','max:1024']
+            ]);
+
+            //ID
             $id = $request->article_id;
 
             //Get Old Photo

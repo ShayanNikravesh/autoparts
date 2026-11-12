@@ -27,11 +27,11 @@ class UpdateProductRequest extends FormRequest
         
         return [
             'title' => ['required', 'string', 'regex:/^[0-9\-\_ پچجحخهعغفقثصضشسیبلاتنمکگوئدذرزطظژآ]+$/i'],
-            'english_title' => ['required','regex:/^[A-Za-z0-9\-\_\/]+$/i'],
+            'english_title' => ['required','regex:/^[A-Za-z0-9\-\_\/]+$/i','string'],
             'price'=>['required','numeric'],
             'price_discounted'=>['numeric'],
-            'description'=>['required'],
-            'review'=>['required'],
+            'description'=>['required','string'],
+            'review'=>['required','string'],
             'stock'=>['required','numeric'],
         ];
     }
