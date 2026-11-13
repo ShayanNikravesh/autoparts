@@ -117,7 +117,6 @@ class BrandController extends Controller
 
         return response()->json([
             'success' => true,
-            'status' => $brand->status,
             'message' => 'وضعیت تغییر کرد.',
         ]);
         

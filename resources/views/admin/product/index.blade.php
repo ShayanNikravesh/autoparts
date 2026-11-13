@@ -66,7 +66,9 @@
 									<td>{{$product->brand->title}}</td>
 									<td>{{$product->category->title}}</td>
                                     <td>{{$product->tracking_code}}</td>
-									<td><span id="{{$product->id}}">{{FetchStatus($product->status)}}</span></td>
+									<td>
+										<span id="{{$product->id}}">{{FetchStatus($product->status)}}</span>
+									</td>
 									<td>
 										<div class="d-flex">
 											<a href="{{route('products.show',$product->id)}}" class="btn-sm btn-primary btn mx-1" data-toggle="tooltip" data-placement="top" title="مشاهده جزئیات">
@@ -96,19 +98,22 @@
 														<path d="M2 10h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1m9-9h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm0-10a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM2 9a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2zm7 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2zM0 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.354.854a.5.5 0 1 0-.708-.708L3 3.793l-.646-.647a.5.5 0 1 0-.708.708l1 1a.5.5 0 0 0 .708 0z"/>
 													</svg>
 												</button>
-												<div class="dropdown-menu btn-group-sm" style="z-index: 200" aria-labelledby="ChangeStatusProduct">
-													@if ($product->status !== 'active')
-														<button class="dropdown-item bg-success btn" onclick="ChangeStatusProduct('{{$product->id}}','active')">فعال</button>
-													@endif
-													@if ($product->status !== 'inactive')
-														<button class="dropdown-item bg-danger btn" onclick="ChangeStatusProduct('{{$product->id}}','inactive')">غیر فعال</button>
-													@endif
-													@if ($product->status !== 'stop_selling')
-														<button class="dropdown-item bg-warning btn" onclick="ChangeStatusProduct('{{$product->id}}','stop_selling')">توقف فروش</button>
-													@endif
-													@if ($product->status !== 'unavailable')
-														<button class="dropdown-item bg-primary btn" onclick="ChangeStatusProduct('{{$product->id}}','unavailable')">نا موجود</button>
-													@endif
+												<div class="dropdown-menu btn-group-sm bg-transparent" style="z-index: 200" aria-labelledby="ChangeStatusProduct">
+													@php
+														$statuses = [
+															'active' => ['label' => 'فعال',        'class' => 'bg-success'],
+															'inactive' => ['label' => 'غیرفعال',   'class' => 'bg-danger'],
+															'stop_selling' => ['label' => 'توقف فروش', 'class' => 'bg-warning'],
+															'unavailable' => ['label' => 'ناموجود',  'class' => 'bg-primary'],
+														];
+													@endphp
+													@foreach ($statuses as $status => $option)
+														@if ($product->status !== $status)
+															<button type="button" class="dropdown-item btn justify-content-center {{ $option['class'] }}" onclick="ChangeStatusProduct(@js($product->id), @js($status))">
+																{{ $option['label'] }}
+															</button>
+														@endif
+													@endforeach
 												</div>
 											</div>
 										</div>

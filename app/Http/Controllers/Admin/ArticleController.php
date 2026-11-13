@@ -202,7 +202,6 @@ class ArticleController extends Controller
 
         return response()->json([
             'success' => true,
-            'status' => $article->status,
             'message' => 'وضعیت تغییر کرد.',
         ]);
         

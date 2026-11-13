@@ -131,7 +131,6 @@ class CategoryController extends Controller
 
         return response()->json([
             'success' => true,
-            'status' => $category->status,
             'message' => 'وضعیت تغییر کرد.',
         ]);
     }

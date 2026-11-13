@@ -22,6 +22,9 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
+        $title = 'حذف محول!';
+        $text = "آیا از حذف این محصول اطمینان دارید؟";
+        confirmDelete($title, $text);
         return view('admin.product.index',compact('products'));
     }
 
@@ -138,9 +141,10 @@ class ProductController extends Controller
         $product->status = $status;
         $product->save();
 
-        Alert::success('عملیات موفق', 'وضعیت محصول تغییر کرد.');
-
-        return redirect()->back();
+        return response()->json([
+            'success' => true,
+            'message' => 'وضعیت تغییر کرد.',
+        ]);
     }
 
     public function showProductPhoto(string $id)
