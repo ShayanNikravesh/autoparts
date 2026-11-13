@@ -11559,7 +11559,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			// "sEmptyTable": "No data available in table",
+			"sEmptyTable": "داده‌ای در جدول موجود نیست.",
 	
 	
 			/**
@@ -11591,7 +11592,9 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			// "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "نمایش _START_ تا _END_ از _TOTAL_ مورد",
+			
 	
 	
 			/**
@@ -11612,7 +11615,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			// "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": " ",
 	
 	
 			/**
@@ -11752,7 +11756,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+			// "sLengthMenu": "Show _MENU_ entries",
+			"sLengthMenu": "نمایش _MENU_ مورد",
 	
 	
 			/**
@@ -11832,7 +11837,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			"sSearch": "جست و جو :",
 	
 	
 			/**
