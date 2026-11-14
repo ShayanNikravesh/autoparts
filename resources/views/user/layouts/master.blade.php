@@ -50,19 +50,19 @@
 
                         <!--            Humber Btn:end-->
                     </div>
-                    <!--        Top Mobile Navbar Right:end-->
+                    <!--Top Mobile Navbar Right:end-->
 
-                    <!--        Top Mobile Navbar Middle:start-->
+                    <!--Top Mobile Navbar Middle:start-->
                     <div class="top-mobile-navbar-middle d-flex justify-content-between align-items-center">
                         <!--            Logo:start-->
                         <a href="javascript:void(0)" class="navbar-brand">
                             <img src="{{asset('user_assets/img/logo.png')}}" alt="لوگو" class="blur-up">
                         </a>
-                        <!--            Logo:end-->
+                        <!--Logo:end-->
                     </div>
-                    <!--        Top Mobile Navbar Middle:end-->
+                    <!--Top Mobile Navbar Middle:end-->
 
-                    <!--        Top Mobile Navbar Left:start-->
+                    <!--Top Mobile Navbar Left:start-->
                     <div class="top-mobile-navbar-left">
                         <!--begin::Svg Icon-->
                         <svg class="blur-up" xmlns="http://www.w3.org/2000/svg"
@@ -77,11 +77,11 @@
                             </g>
                         </svg><!--end::Svg Icon-->
                     </div>
-                    <!--        Top Mobile Navbar Left:end-->
+                    <!--Top Mobile Navbar Left:end-->
                 </div>
-                <!--        Container:end-->
+                <!--Container:end-->
             </div>
-            <!--        Top Mobile Navbar In Mobile:end-->
+            <!--Top Mobile Navbar In Mobile:end-->
         </div>
         <div class="main-navbar pt-1">
             <!--        Main Mobile Navbar:start-->
@@ -345,7 +345,6 @@
                         <!--Navbar Items Mobile Body:start-->
                         <div class="navbar-items-mobile-body p-3">
                             <ul class="navbar-parent">
-                                {{-- <li class="fs-6">دسته بندی کالاها</li> --}}
                                 <li class="border-bottom-gray-150 px-2 py-3">
                                     <a href="" class="fs-6 fw-bold d-block showSubMenu">
                                         <!--begin::Svg-->
@@ -356,22 +355,41 @@
                                         دسته بندی کالاها
                                         <i class="fa fa-angle-left float-end"></i>
                                     </a>
-
                                     <!--Navbar Items Child:start-->
                                     <ul class="first-child-parent p-3">
                                         <li class="fs-5 border-bottom-gray-300 pb-2 fw-bold text-center">
-                                            چراغ
+                                            دسته ها
                                         </li>
                                         <li class="py-3"><a href="javascript:void(0)" class="fs-6 backToProductCategories"><i class="fa fa-arrow-right me-2"></i>بازگشت</a></li>
-                                        <li class="border-bottom-gray-150 px-2 py-3">
-                                            <a href="javascript:;" class="fs-6 fw-bold d-block" title="">
-                                                موتور
-                                                <i class="fa fa-angle-left float-end"></i>
-                                            </a>
-                                        </li>
+                                        @foreach ($parents as $parent)
+                                            <!--Parents:Start-->
+                                            <li class="border-bottom-gray-150 px-2 py-3">
+                                                <a href="javascript:;" class="fs-6 fw-bold d-block showSubMenu2" title="">
+                                                    {{ $parent->title }}
+                                                    <i class="fa fa-angle-left float-end"></i>
+                                                </a>
+                                                <!--Children:Start-->
+                                                <ul class="first-child-parent p-3">
+                                                    <li class="fs-5 border-bottom-gray-300 pb-2 fw-bold text-center">
+                                                        {{$parent->title}}
+                                                    </li>
+                                                    <li class="py-3"><a href="javascript:void(0)" class="fs-6 backToProductCategories"><i class="fa fa-arrow-right me-2"></i>بازگشت</a></li>
+                                                    @foreach ($categories as $category)
+                                                        @if ($category->parent_id == $parent->id)
+                                                            <li class="border-bottom-gray-150 px-2 py-3">
+                                                                <a href="" title="">
+                                                                    {{$category->title}}
+                                                                </a>
+                                                            </li>
+                                                        @endif 
+                                                    @endforeach
+                                                </ul>
+                                                <!--Children:End-->
+                                            </li>
+                                            <!--Parents:End-->
+                                        @endforeach
                                     </ul>
                                     <!--Navbar Items Child:end-->
-
                                 </li>
                                 <li class="border-bottom-gray-150 px-2 py-3">
                                     <a href="" class="fs-6 fw-bold d-block showSubMenu">
@@ -384,21 +402,21 @@
                                         برندها  
                                         <i class="fa fa-angle-left float-end"></i>
                                     </a>
-
                                     <!--Navbar Items Child:start-->
                                     <ul class="first-child-parent p-3">
                                         <li class="fs-5 border-bottom-gray-300 pb-2 fw-bold text-center">
                                             برندها
                                         </li>
                                         <li class="py-3"><a href="javascript:void(0)" class="fs-6 backToProductCategories"><i class="fa fa-arrow-right me-2"></i>بازگشت</a></li>
-                                        <li class="border-bottom-gray-150 px-2 py-3">
-                                            <a href="javascript:;" class="fs-6 fw-bold d-block" title="">
-                                            کیا
-                                            </a>
-                                        </li>
+                                        @foreach ($brands as $brand)
+                                            <li class="border-bottom-gray-150 px-2 py-3">
+                                                <a href="javascript:;" class="fs-6 fw-bold d-block" title="">
+                                                {{ $brand->title }}
+                                                </a>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                     <!--Navbar Items Child:end-->
-
                                 </li>
                                 <li class="border-bottom-gray-150 px-2 py-3">
                                     <a href="" class="fs-6 fw-bold d-block showSubMenu">
@@ -506,23 +524,29 @@
                         <!--Navbar Child Wrapper:start-->
                         <ul class="position-absolute nav-item-submenu bg-white custom-box-shadow-s-2 border-radius-2xl">
                             <!--Navbar Item Child:start-->
-                            <li class="nav-item-submenu-child">
-                                <a href="single-product.html" class="fw-bold" title="">
-                                    چراغ
-                                    <i class="fa fa-angle-left float-end"></i>
-                                </a>
-                                <!--Navbar Item Sub Child Wrapper:start-->
-                                <ul class="position-absolute top-0 bg-white custom-box-shadow-s-2 border-radius-2xl">
-                                    <!--Navbar Item Sub Child:start-->
-                                    <li>
-                                        <a href="single-product.html" title="">
-                                            موتور 
-                                        </a>
-                                    </li>
-                                    <!--Navbar Item Sub Child:end-->
-                                </ul>
-                                <!--Navbar Item Sub Child Wrapper:end-->
-                            </li>
+                            @foreach ($parents as $parent)
+                                <li class="nav-item-submenu-child">
+                                    <a href="single-product.html" class="fw-bold" title="">
+                                        {{ $parent->title }}
+                                        <i class="fa fa-angle-left float-end"></i>
+                                    </a>
+                                    <!--Navbar Item Sub Child Wrapper:start-->
+                                    <ul class="position-absolute top-0 bg-white custom-box-shadow-s-2 border-radius-2xl">
+                                        <!--Navbar Item Sub Child:start-->
+                                        @foreach ($categories as $category)
+                                            @if ($category->parent_id == $parent->id)
+                                                <li>
+                                                    <a href="single-product.html" title="">
+                                                        {{ $category->title }} 
+                                                    </a>
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                        <!--Navbar Item Sub Child:end-->
+                                    </ul>
+                                    <!--Navbar Item Sub Child Wrapper:end-->
+                                </li>
+                            @endforeach
                             <!--Navbar Item Child:end-->
                         </ul>
                         <!--Navbar Child Wrapper:end-->
@@ -546,11 +570,13 @@
                         <!--Navbar Child Wrapper:start-->
                         <ul class="position-absolute nav-item-submenu bg-white custom-box-shadow-s-2 border-radius-2xl">
                             <!--Navbar Item Child:start-->
-                            <li class="nav-item-submenu-child">
-                                <a href="single-product.html" class="fw-bold" title="">
-                                    کیا
-                                </a>
-                            </li>
+                            @foreach ($brands as $brand)
+                                <li class="nav-item-submenu-child">
+                                    <a href="single-product.html" class="fw-bold" title="">
+                                        {{ $brand->title }}
+                                    </a>
+                                </li>
+                            @endforeach
                             <!--Navbar Item Child:end-->
                         </ul>
                         <!--Navbar Child Wrapper:end-->
