@@ -10,9 +10,14 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function index()
+    {
+        $products = Product::where('status','active')->where('price_discounted','>',0)->paginate(12);
+        return view('user.product.products',compact('products'));
+    }
+
     public function show(string $code)
     {
-        // $product = Product::findOrFail($id);
         $product = Product::where('tracking_code','=',$code)->where('status', '=', 'active')->firstOrFail();
         return view('user.product.product',compact('product'));
     }
@@ -95,4 +100,5 @@ class ProductController extends Controller
     
         return view('user.product.products', compact('products'));
     }
+    
 }

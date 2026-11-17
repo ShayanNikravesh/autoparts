@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Banner;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -17,6 +18,8 @@ class HomeController extends Controller
         $medium_banner = $banners->get('بنر متوسط');
         $small_banner = $banners->get('بنر کوچک');
 
-        return view('user.index',compact('carousel','medium_banner','small_banner'));
+        $products = Product::where('status','active')->where('price_discounted','>',0)->latest()->limit(10)->get();
+
+        return view('user.index',compact('carousel','medium_banner','small_banner','products'));
     }
 }

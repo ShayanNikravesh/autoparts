@@ -4,6 +4,7 @@
 // use Illuminate\Support\Facades\Auth;
 
 use App\Models\Manager;
+use App\Models\Product;
 
 function FetchStatus (string $status){
     switch ($status) {
@@ -49,11 +50,16 @@ function priceFormatter(int $price) {
     return number_format($price) . ' تومان';
 }
 
-function getpercent(array $value){
-    if ($value['price']==0 || $value['price_discounted']==0){
+function getpercent(Product $value){
+
+    if ($value['price']==0 || $value['price_discounted']==0)
+    {
         return false;
     }
-    return round( (($value['price']-$value['price_discounted']) / $value['price_discounted']) * 100 );
+
+    $percent = round( (($value['price']-$value['price_discounted']) / $value['price']) * 100 );
+
+    return $percent;
 }
 
 function getPhoto(int $id){

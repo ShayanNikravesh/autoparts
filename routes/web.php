@@ -11,6 +11,9 @@ Route::domain('admin.autoparts.test')->middleware('web')->group(base_path('route
 //Index
 Route::get('/',[HomeController::class,'index'])->name('user_index');
 
+//Discounted Products
+Route::get('index',[ProductController::class,'index'])->name('discounted_products');
+
 //Category Products
 Route::get('category/{id}',[ProductController::class,'category'])->name('category_products');
 
