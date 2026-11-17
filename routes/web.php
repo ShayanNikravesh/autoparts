@@ -31,3 +31,9 @@ Route::get('search',[ProductController::class,'search'])->name('search');
 Route::get('blog',[ArticleControlller::class,'index'])->name('index');
 Route::get('article/{id}',[ArticleControlller::class,'show'])->name('show');
 
+//About
+Route::view('/about', 'user.about')->name('about');
+
+Route::fallback(function () {
+    return view('user.404');
+});

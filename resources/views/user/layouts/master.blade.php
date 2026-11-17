@@ -419,7 +419,7 @@
                                     </a>
                                 </li>
                                 <li class="border-bottom-gray-150 px-2 py-3">
-                                    <a href="" class="fs-6 fw-bold d-block showSubMenu">
+                                    <a href="{{ route('about') }}" class="fs-6 fw-bold d-block showSubMenu">
                                         <!--begin::Svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
                                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -429,7 +429,7 @@
                                         درباره ما 
                                     </a>
                                 </li>
-                                <li class="border-bottom-gray-150 px-2 py-3">
+                                {{-- <li class="border-bottom-gray-150 px-2 py-3">
                                     <a href="" class="fs-6 fw-bold d-block showSubMenu">
                                         <!--begin::Svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
@@ -439,7 +439,7 @@
                                         <!--end::Svg Icon-->
                                         راهنمای خرید 
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                         <!--Navbar Items Mobile Body:end-->
@@ -592,7 +592,7 @@
                     <!--Navbar Item:end-->
                     <!--Navbar Item:start-->
                     <li class="nav-item d-flex justify-content-between align-items-center position-relative">
-                        <a class="mx-2 py-2" href="" title="">
+                        <a class="mx-2 py-2" href="{{ route('about') }}" title="">
                             <!--begin::Svg Icon-->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -606,7 +606,7 @@
                         <!--Navbar Item:end-->
                     </li>
                     <!--Navbar Item:end-->
-                    <li class="nav-item d-flex justify-content-between align-items-center position-relative">
+                    {{-- <li class="nav-item d-flex justify-content-between align-items-center position-relative">
                         <a class="mx-2 py-2" href="" title="">
                             <!--begin::Svg Icon-->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
@@ -616,7 +616,7 @@
                             <!--end::Svg Icon-->
                             راهنمای خرید
                         </a>
-                    </li>
+                    </li> --}}
                     <!--Navbar Item:end-->
                 </ul>
                 <!--        Navbar Wrapper:end-->
@@ -668,7 +668,7 @@
 <footer class="footer mt-5">
     <div class="container">
         <div class="footer-top mt-4 mb-5">
-            <!--            Footer Top Detail:start-->
+            <!--Footer Top Detail:start-->
             <div class="footer-top-detial d-flex justify-content-between align-items-center">
                 <div class="">
                     <a href="" title=""><img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.PNG')}}" style="width :45px" alt=""></a>
@@ -679,96 +679,27 @@
                     <i class="fa fa-angle-up ps-2"></i>
                 </a>
             </div>
-            <!--            Footer Top Detail:end-->
+            <!--Footer Top Detail:end-->
 
-            <!--            Footer Top Attr:start-->
-            <div class="footer-top-attr d-flex justify-content-between align-items-center my-5">
-                <!--                Top Right Item:start-->
-                <div class="top-right-item text-center">
-                    <img src="{{asset('user_assets/img/express-delivery.svg')}}" alt="" title="">
-                    <p class="mt-2 fs-8">امکان تحویل اکسپرس</p>
-                </div>
-                <!--                Top Right Item:end-->
-
-                <!--                Top Right Item:start-->
-                <div class="top-right-item text-center">
-                    <img src="{{asset('user_assets/img/cash-on-delivery.svg')}}" alt="" title="">
-                    <p class="mt-2 fs-8">امکان پرداخت در محل</p>
-                </div>
-                <!--                Top Right Item:end-->
-
-                <!--                Top Right Item:start-->
-                <div class="top-right-item text-center">
-                    <img src="{{asset('user_assets/img/support.svg')}}" alt="" title="">
-                    <p class="mt-2 fs-8">7 روز هفته، 24 ساعته</p>
-                </div>
-                <!--                Top Right Item:end-->
-
-                <!--                Top Right Item:start-->
-                <div class="top-right-item text-center">
-                    <img src="{{asset('user_assets/img/days-return.svg')}}" alt="" title="">
-                    <p class="mt-2 fs-8">هفت روز ضمانت بازگشت کالا</p>
-                </div>
-                <!--                Top Right Item:end-->
-
-                <!--                Top Right Item:start-->
-                <div class="top-right-item text-center">
-                    <img src="{{asset('user_assets/img/original-products.svg')}}" alt="" title="">
-                    <p class="mt-2 fs-8">ضمانت اصالت کالا</p>
-                </div>
-                <!--                Top Right Item:end-->
-            </div>
-            <!--            Footer Top Attr:end-->
+            
         </div>
         <div class="footer-main my-5">
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4">
-                    <p class="fw-bold fs-6">راهنمای خرید از برگشاپ</p>
-                    <ul>
-                        <li class="my-2"><a href="">نحوه ثبت سفارش</a></li>
-                        <li class="my-2"><a href="">رویه ارسال سفارش</a></li>
-                        <li class="my-2"><a href="">شیوه های پرداخت</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4">
-                    <p class="fw-bold fs-6">خدمات مشتریان</p>
-                    <ul>
-                        <li class="my-2"><a href="">پاسخ به پرسش های متدوال</a></li>
-                        <li class="my-2"><a href="">رویه های بازگشت کالا</a></li>
-                        <li class="my-2"><a href="">شرایط استفاده</a></li>
-                        <li class="my-2"><a href="">حریم خصوصی</a></li>
-                        <li class="my-2"><a href="">گزارش باگ</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4">
-                    <p class="fw-bold fs-6">راهنمای خرید از برگشاپ</p>
-                    <ul>
-                        <li class="my-2"><a href="">نحوه ثبت سفارش</a></li>
-                        <li class="my-2"><a href="">رویه ارسال سفارش</a></li>
-                        <li class="my-2"><a href="">شیوه های پرداخت</a></li>
-                    </ul>
+                <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 mb-3">
+                    <h1 class="fw-bold fs-5">فروشگاه اینترنتی برگشاپ، بررسی، انتخاب و خرید آنلاین.</h1>
+                    <p class="gray-600 mt-3 fs-7">
+                        خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای قیمت مناسب
+                        را در مدت زمانی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛ ویژگی‌هایی که
+                        فروشگاه اینترنتی دیجی‌کالا سال‌هاست بر روی آن‌ها کار کرده و توانسته از این طریق مشتریان ثابت خود
+                        را داشته باشد.
+                    </p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4">
                     <p class="fw-bold fs-6">همراه ما باشید!</p>
-                    <ul class="social-list d-flex justify-content-around align-items-center mt-3">
+                    <ul class="social-list d-flex  align-items-center mt-3">
                         <li class="my-2 instagram">
                             <a href="">
                                 <i class="fab fa-instagram fa-2x gray-500"></i>
-                            </a>
-                        </li>
-                        <li class="my-2 twitter">
-                            <a href="">
-                                <i class="fab fa-twitter fa-2x gray-500"></i>
-                            </a>
-                        </li>
-                        <li class="my-2 linkedin">
-                            <a href="">
-                                <i class="fab fa-linkedin fa-2x gray-500"></i>
-                            </a>
-                        </li>
-                        <li class="my-2 telegram">
-                            <a href="">
-                                <i class="fab fa-telegram fa-2x gray-500"></i>
                             </a>
                         </li>
                     </ul>
@@ -776,7 +707,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-info py-5">
+    {{-- <div class="footer-info py-5">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 mb-3">
@@ -796,7 +727,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="footer-copyright text-center py-4">
         <div class="container">
             <p class="fs-8 gray-600">
