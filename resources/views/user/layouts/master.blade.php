@@ -28,7 +28,7 @@
 
 <!--Body::start-->
 <body>
-
+@routes
 <!--Loader:start-->
 <div class="loader mt-5">
     <div class="custom-navbar">
@@ -98,8 +98,7 @@
                     <div class="main-mobile-navbar-right">
                         <!--            Search Form:start-->
                         <form action="javascript:void(0)" class="position-relative">
-                            <input class="form-control border-0 fs-6 fw-normal bg-gray-150 border-radius-xl py-2"
-                                   type="search" placeholder="جستجو">
+                            <input class="form-control border-0 fs-6 fw-normal bg-gray-150 border-radius-xl py-2" type="search" placeholder="جستجو">
                             <button class="btn position-absolute" type="submit">
                                 <i class="fab fa-sistrix gray-500 fw-md fs-5 blur-up"></i>
                             </button>
@@ -139,9 +138,8 @@
                     <!--Logo:end-->
 
                     <!--Search Form:start-->
-                    <form action="javascript:void(0)" class="position-relative">
-                        <input class="form-control border-0 fs-6 fw-normal border-radius-xl bg-gray-150"
-                               type="search" placeholder="جستجو">
+                    <form action="{{ route('search') }}" class="position-relative" method="GET">
+                        <input class="form-control border-0 fs-6 fw-normal border-radius-xl bg-gray-150" type="search" placeholder="جستجو">
                         <button class="btn position-absolute" type="submit">
                             <i class="fab fa-sistrix fw-md fs-5 gray-500 blur-up"></i>
                         </button>
@@ -271,14 +269,13 @@
                     </div>
                 </div> --}}
                 <div class="main-search position-relative">
-                    <form action="search.html" class="position-relative">
-                        <input class="form-control border-0 border-radius-xl bg-gray-150 fs-7"
-                               type="search" placeholder="جستجو" id="mainSearchInput" autocomplete="off">
+                    <form action="{{route('search')}}" method="GET" class="position-relative" id="searchForm">
+                        <input class="form-control border-0 border-radius-xl bg-gray-150 fs-7" name="search" type="search" placeholder="جستجو" id="mainSearchInput" autocomplete="off">
                         <button class="btn position-absolute" type="submit">
                             <i class="fab fa-sistrix fw-md fs-5 gray-500"></i>
                         </button>
                     </form>
-                    <div class="search-results custom-box-shadow-s-2">
+                    <div class="search-results custom-box-shadow-s-2" style="display: none;">
                         <span class="py-2 px-3 d-block fs-7">نتایج جست و جو :</span>
                     </div>
                 </div>
@@ -643,9 +640,8 @@
                 <!--Main Mobile Navbar Right:start-->
                 <div class="main-mobile-navbar-right">
                     <!--Search Form:start-->
-                    <form action="search.html" class="position-relative">
-                        <input class="form-control border-0 fs-6 fw-normal bg-gray-150 border-radius-xl py-2"
-                               type="search" placeholder="جستجو">
+                    <form action="{{ route('search') }}" class="position-relative">
+                        <input class="form-control border-0 fs-6 fw-normal bg-gray-150 border-radius-xl py-2" name="search" type="search" placeholder="جستجو">
                         <button class="btn position-absolute" type="submit">
                             <i class="fab fa-sistrix text-light-gray fw-md fs-5"></i>
                         </button>

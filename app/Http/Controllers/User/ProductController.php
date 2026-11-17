@@ -79,4 +79,20 @@ class ProductController extends Controller
         return view('user.product.products', compact('products'));
     }
 
+    public function search(Request $request)
+    {
+        $request->validate([
+            'search' => ['string','max:100'],
+        ]);
+
+        $search = $request->search;
+        
+        $products = Product::where('title', 'LIKE', "%{$search}%")->orWhere('english_title', 'LIKE', "%{$search}%")->orWhere('tracking_code', 'LIKE', "%{$search}%")->paginate(12);
+
+        if ($request->ajax()) {
+            return response()->json($products);
+        }
+    
+        return view('user.product.products', compact('products'));
+    }
 }

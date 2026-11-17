@@ -22,3 +22,7 @@ Route::get('product/{id}',[ProductController::class,'show'])->name('single_produ
 
 //Filter
 Route::get('filter',[ProductController::class,'filter'])->name('filter');
+
+//Search
+Route::get('search',[ProductController::class,'search'])->name('search');
+
