@@ -13,14 +13,14 @@ class ProductController extends Controller
     public function show(string $code)
     {
         // $product = Product::findOrFail($id);
-        $product = Product::where('tracking_code','=',$code)->firstOrFail();
+        $product = Product::where('tracking_code','=',$code)->where('status', '=', 'active')->firstOrFail();
         return view('user.product.product',compact('product'));
     }
 
     public function category(string $id)
     {
         //Category
-        $category = Category::findOrFail($id);
+        $category = Category::where('id', '=', $id)->where('status', '=', 'active')->firstOrFail();
         $title = $category->title;
 
         //Category Products
@@ -33,7 +33,7 @@ class ProductController extends Controller
     public function brand(string $id)
     {
         //Brand
-        $brand = Brand::findOrFail($id);
+        $brand = Brand::where('id', '=', $id)->where('status', '=', 'active')->firstOrFail();
         $title = $brand->title;
 
         //Brand Products
