@@ -63,6 +63,11 @@
                 </div>
                 <!--Products:end-->
                 
+                <!--Pagination:start-->
+                <div class="mt-3 d-flex justify-content-center align-items-center">
+                    {{ $products->links('vendor.pagination.bootstrap-4') }}
+                </div>
+                <!--Pagination:end-->
             </div>
         </div>
     </div>
