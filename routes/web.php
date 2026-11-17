@@ -20,3 +20,5 @@ Route::get('brand/{id}',[ProductController::class,'brand'])->name('brand_product
 //Single Product
 Route::get('product/{id}',[ProductController::class,'show'])->name('single_product');
 
+//Filter
+Route::get('filter',[ProductController::class,'filter'])->name('filter');

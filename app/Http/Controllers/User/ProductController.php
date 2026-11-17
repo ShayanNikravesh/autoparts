@@ -42,4 +42,41 @@ class ProductController extends Controller
         return view('user.product.products',compact('products','title'));
     }
 
+    public function filter(Request $request)
+    {
+
+        $query = Product::query();
+
+        $query->where('status', '!=', 'inactive');
+
+        if ($request->has('category')) 
+        {
+            $query->where('category_id', $request->category);
+        }
+    
+        if ($request->has('brand')) 
+        {
+            $query->where('brand_id', $request->brand);
+        }
+       
+        if ($request->has('min_price') && is_numeric($request->min_price)) 
+        {
+            $query->where('price', '>=', $request->min_price);
+        }
+    
+        if ($request->has('max_price') && is_numeric($request->max_price))
+        {
+            $query->where('price', '<=', $request->max_price);
+        }
+
+        if ($request->available == 1) 
+        {
+            $query->where('status', '=', 'active');  
+        }
+
+        $products = $query->paginate(12);
+        
+        return view('user.product.products', compact('products'));
+    }
+
 }
