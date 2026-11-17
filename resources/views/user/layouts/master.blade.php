@@ -408,7 +408,7 @@
                                     <!--Navbar Items Child:end-->
                                 </li>
                                 <li class="border-bottom-gray-150 px-2 py-3">
-                                    <a href="" class="fs-6 fw-bold d-block showSubMenu">
+                                    <a href="{{ route('index') }}" class="fs-6 fw-bold d-block showSubMenu">
                                         <!--begin::Svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
                                             <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
@@ -576,7 +576,7 @@
                     <!--Navbar Item:end-->
                     <!--Navbar Item:start-->
                     <li class="nav-item d-flex justify-content-between align-items-center position-relative">
-                        <a class="mx-2 py-2" href="" title="">
+                        <a class="mx-2 py-2" href="{{ route('index') }}" title="">
                             <!--begin::Svg Icon-->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
                                 <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>

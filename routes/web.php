@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\ArticleControlller;
 use App\Http\Controllers\User\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +26,8 @@ Route::get('filter',[ProductController::class,'filter'])->name('filter');
 
 //Search
 Route::get('search',[ProductController::class,'search'])->name('search');
+
+//Article
+Route::get('blog',[ArticleControlller::class,'index'])->name('index');
+Route::get('article/{id}',[ArticleControlller::class,'show'])->name('show');
 
