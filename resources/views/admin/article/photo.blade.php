@@ -41,23 +41,24 @@
             </form>
             <div class="card card-custom gutter-b" id="div{{$article->id}}">
                 <div class="card-header">
-                    <h3 class="card-title">مدیریت تصاویر</h3>
+                    <h3 class="card-title">مدیریت تصویر</h3>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         @if ($article)
-                            @foreach ($article->photo as $photo)
-                            <div class="col-lg-2 text-center" id="photo{{$photo->id}}">
-                                <label for="">«{{++$loop->index}}»</label>
-                                <br>
-                                <div class="image-input image-input-outline">
-                                    <div class="image-input-wrapper" style="background-image: url('{{asset($photo->src)}}');"></div>
-                                    <a class="btn btn-hover-icon-danger" href="{{ route('delete_photo',$photo->id) }}" method="POST" data-toggle="tooltip" data-placement="bottom" title="حذف عکس" data-confirm-delete="true">
-                                        <i class="fa fa-trash"></i></button>
-                                    </a>
+                            @php
+                                $photo = $article->photo->first();
+                            @endphp
+                            @isset($photo)
+                                <div class="col-lg-2 text-center" id="photo{{$photo->id}}">
+                                    <div class="image-input image-input-outline">
+                                        <div class="image-input-wrapper" style="background-image: url('{{asset($photo->src)}}');"></div>
+                                        <a class="btn btn-hover-icon-danger" href="{{ route('delete_photo',$photo->id) }}" method="POST" data-toggle="tooltip" data-placement="bottom" title="حذف عکس" data-confirm-delete="true">
+                                            <i class="fa fa-trash"></i></button>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            @endforeach
+                            @endisset
                         @endif
                     </div>
                 </div>

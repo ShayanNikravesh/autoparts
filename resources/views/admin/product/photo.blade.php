@@ -45,8 +45,7 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        @if ($product)
-                            @foreach ($product->photos as $photo)
+                        @foreach ($product->photos as $photo)
                             <div class="col-lg-2 text-center" id="photo{{$photo->id}}">
                                 <label for="">«{{$photo->pivot->sort}}»</label>
                                 <br>
@@ -57,8 +56,7 @@
                                     </a>
                                 </div>
                             </div>
-                            @endforeach
-                        @endif
+                        @endforeach
                     </div>
                 </div>
             </div>

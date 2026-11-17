@@ -62,7 +62,7 @@ class ArticleController extends Controller
      */
     public function show(string $id)
     {
-        $article = Article::with('photo')->findOrFail($id);
+        $article = Article::findOrFail($id);
         $title = 'حذف عکس!';
         $text = "آیا از حذف این عکس اطمینان دارید؟";
         confirmDelete($title, $text);
