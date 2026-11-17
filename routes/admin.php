@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\BannerControlller;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ManagerController;
@@ -25,10 +26,12 @@ Route::post('manager/ChangeLevel/{id}',[ManagerController::class,'ChangeLevel'])
 
 //Show Photo
 Route::get('product/{id}/photos',[ProductController::class,'showProductPhoto'])->name('show_product_photo');
+Route::get('banner/{id}/photos',[BannerControlller::class,'show'])->name('show_banner_photo');
 
 //Store Photo
 Route::post('article/photo',[ArticleController::class,'storePhoto'])->name('store_article_photo');
 Route::post('product/photo',[ProductController::class,'storePhoto'])->name('store_product_photo');
+Route::post('banner/photo',[BannerControlller::class,'storePhoto'])->name('store_banner_photo');
 
 //Delete Photo
 Route::delete('photo/{id}',[PhotoController::class,'delete'])->name('delete_photo');

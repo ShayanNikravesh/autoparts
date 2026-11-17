@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\User\ArticleControlller;
+use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,9 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::domain('admin.autoparts.test')->middleware('web')->group(base_path('routes/admin.php'));
 
 //Index
-Route::get('/', function () {
-    return view('user.index');
-})->name('user_index');
+Route::get('/',[HomeController::class,'index'])->name('user_index');
 
 //Category Products
 Route::get('category/{id}',[ProductController::class,'category'])->name('category_products');

@@ -111,14 +111,15 @@
             <!-- Slider:start -->
             <div class="swiper headerSlider border-radius-3xl">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/banner/banner.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
-                    <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/category-header-1.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
-                    <div class="swiper-slide"><a href="" title=""><img src="{{asset('user_assets/img/category-header-2.jpg')}}" class="img-fluid object-cover" alt=""></a></div>
+                    @foreach ($carousel->photos as $photo)
+                        <div class="swiper-slide">
+                            <a href="javascript:;" title=""><img src="{{asset($photo->src)}}" class="img-fluid object-cover" alt=""></a>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="swiper-button-next bg-light border-radius-circle"></div>
                 <div class="swiper-button-prev bg-light border-radius-circle"></div>
                 <div class="swiper-pagination"></div>
-
             </div>
             <!-- Slider:end -->
         </header>
@@ -228,32 +229,19 @@
         </div>
         <!--Best Suggestions:End-->
 
-        <!--    Banners:start-->
+        <!--Banners:start-->
         <div class="banners my-5">
             <div class="row">
+                @foreach ($medium_banner->photos as $photo)
                 <div class="col-6 mb-3">
-                    <a href="" title="">
-                        <img src="{{asset('user_assets/img/category-banner-1.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
+                    <a href="javascript:;" title="">
+                        <img src="{{asset($photo->src)}}" alt="" class="img-fluid border-radius-3xl img-opacity">
                     </a>
                 </div>
-                <div class="col-6 mb-3">
-                    <a href="" title="">
-                        <img src="{{asset('user_assets/img/category-banner-2.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
-                    </a>
-                </div>
-                <div class="col-6 mb-3">
-                    <a href="" title="">
-                        <img src="{{asset('user_assets/img/category-banner-2.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
-                    </a>
-                </div>
-                <div class="col-6 mb-3">
-                    <a href="" title="">
-                        <img src="{{asset('user_assets/img/category-banner-1.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
-        <!--    Banners:end-->
+        <!--Banners:end-->
 
         <!--    Categories:start-->
         <section class="categories mt-5">

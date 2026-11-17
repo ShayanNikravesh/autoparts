@@ -21,4 +21,9 @@ class Photo extends Model
     {
         return $this->belongsToMany(Manager::class)->using(ManagerPhoto::class)->withTimestamps();
     }
+
+    public function banner()
+    {
+        return $this->belongsToMany(Product::class, 'banner_photo', 'photo_id', 'banner_id')->withTimestamps();
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Banner;
 use App\Models\Brand;
 use App\Models\Category;
 use Illuminate\Support\Facades\View;
@@ -38,6 +39,15 @@ class AppServiceProvider extends ServiceProvider
                 'brands' => $brands,
             ]);
 
+        });
+
+        View::composer('admin.layouts.aside', function ($view) 
+        {
+            $banners = Banner::whereIn('title', ['کروسل', 'بنر متوسط', 'بنر کوچک'])->get();
+
+            $view->with([
+                'banners'=>$banners
+            ]);
         });
     }
 }
