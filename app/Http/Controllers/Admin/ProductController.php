@@ -44,7 +44,7 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         $code = random_int(111111111,999999999);
-        $tracking_code = 'BA-'.$code;
+        $tracking_code = 'BAP-'.$code;
 
         dd($request);
         $product = new Product();

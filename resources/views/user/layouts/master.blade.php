@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="{{asset('user_assets/css/vendors/swiper/swiper-bundle.min.css')}}">
     <!--    Main Styles-->
     <link rel="stylesheet" href="{{asset('user_assets/css/style.css')}}">
+    <!--DataTables-->
+    <link rel="stylesheet" href="{{asset('user_assets/css/vendors/dataTables/responsive.dataTables.min.css')}}">
+    <!--Jquery DataTables-->
+    <link rel="stylesheet" href="{{asset('user_assets/css/vendors/jquery/jquery.dataTables.min.css')}}">
+    <!--Single product-->
+    <link rel="stylesheet" href="{{asset('user_assets/css/vendors/xzoom/xzoom.min.css')}}">
 </head>
 <!--Head::end-->
 
@@ -234,11 +240,11 @@
 
 <!--Navbar:start-->
 <div class="custom-navbar" id="customNavbar">
-    <!--        Ads Banner:start-->
+    <!--Ads Banner:start-->
     <a href="" class="ads-banner" title="">
         <img src="{{asset('user_assets/img/ads-banner.jpg')}}" alt="" class="img-fluid object-cover">
     </a>
-    <!--        Ads Banner:end-->
+    <!--Ads Banner:end-->
 
     <!--Top Navbar::start-->
     <div class="top-navbar navbar-expand-lg navbar-light py-2">
@@ -247,12 +253,23 @@
             <!--Top Navbar Right:start-->
             <div class="top-nav-right d-flex justify-content-between align-items-center">
                 <!--Logo:start-->
-                <a href="index.html" class="navbar-brand" title="">
+                <a href="{{ route('user_index') }}" class="navbar-brand" title="">
                     <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.PNG')}}" style="width :45px" alt="لوگو">
                 </a>
                 <!--Logo:end-->
                 
                 <!--Search Form:start-->
+                {{-- <div class="main-search position-relative">
+                    <form action="{{ route('search') }}" method="GET" class="position-relative" id="searchForm">
+                        <input class="form-control border-0 border-radius-xl bg-gray-150 fs-7" type="search" placeholder="جستجو" id="mainSearchInput" autocomplete="off">
+                        <button class="btn position-absolute" type="submit">
+                            <i class="fab fa-sistrix fw-md fs-5 gray-500"></i>
+                        </button>
+                    </form>
+                    <div class="search-results custom-box-shadow-s-2" style="display: none;">
+                        <span class="py-2 px-3 d-block fs-7">نتایج جست و جو :</span>
+                    </div>
+                </div> --}}
                 <div class="main-search position-relative">
                     <form action="search.html" class="position-relative">
                         <input class="form-control border-0 border-radius-xl bg-gray-150 fs-7"
@@ -263,31 +280,6 @@
                     </form>
                     <div class="search-results custom-box-shadow-s-2">
                         <span class="py-2 px-3 d-block fs-7">نتایج جست و جو :</span>
-
-                        <!--Search Item:start-->
-                        <div class="search-result-item position-relative border-bottom p-3">
-                            <i class="fab fa-sistrix fw-md fs-5 gray-500 d-inline-block"></i>
-                            <div class="d-inline-block ms-2">
-                                <span class="d-inline-block fw-bold ms-1">سلفون </span>
-                                <span class="d-block">در دسته <strong>زیبایی و سلامت</strong></span>
-                            </div>
-                            <!--Search Link:start-->
-                            <a href="search.html" class="stretched-link"></a>
-                            <!--Search Link:end-->
-                        </div>
-                        <!--Search Item:end-->
-
-                        <!--See All Results:start-->
-                        <div class="search-result-item position-relative border-bottom p-3">
-                            <div class="d-flex justify-content-between align-items-center ms-2 text-center">
-                                <span class="d-inline-block fw-bold ms-1">مشاهده همه نتایج </span>
-                                <i class="fa fa-arrow-left"></i>
-                            </div>
-                            <!--                            Search Link:start-->
-                            <a href="search.html" class="stretched-link"></a>
-                            <!--                            Search Link:end-->
-                        </div>
-                        <!--See All Results:end-->
                     </div>
                 </div>
                 <!--Search Form:end-->
@@ -377,7 +369,7 @@
                                                     @foreach ($categories as $category)
                                                         @if ($category->parent_id == $parent->id)
                                                             <li class="border-bottom-gray-150 px-2 py-3">
-                                                                <a href="" title="">
+                                                                <a href="{{ route('category_products',$category->id) }}" title="">
                                                                     {{$category->title}}
                                                                 </a>
                                                             </li>
@@ -410,7 +402,7 @@
                                         <li class="py-3"><a href="javascript:void(0)" class="fs-6 backToProductCategories"><i class="fa fa-arrow-right me-2"></i>بازگشت</a></li>
                                         @foreach ($brands as $brand)
                                             <li class="border-bottom-gray-150 px-2 py-3">
-                                                <a href="javascript:;" class="fs-6 fw-bold d-block" title="">
+                                                <a href="{{ route('brand_products',$brand->id) }}" class="fs-6 fw-bold d-block" title="">
                                                 {{ $brand->title }}
                                                 </a>
                                             </li>
@@ -484,7 +476,7 @@
                             </g>
                         </svg><!--end::Svg Icon-->
                     </a> --}}
-                    <a href="index.html" class="navbar-brand pb-2" title="">
+                    <a href="{{ route('user_index') }}" class="navbar-brand pb-2" title="">
                         <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.PNG')}}" style="width :45px" alt="لوگو">
                     </a>
                 </div>
@@ -526,7 +518,7 @@
                             <!--Navbar Item Child:start-->
                             @foreach ($parents as $parent)
                                 <li class="nav-item-submenu-child">
-                                    <a href="single-product.html" class="fw-bold" title="">
+                                    <a href="" class="fw-bold" title="">
                                         {{ $parent->title }}
                                         <i class="fa fa-angle-left float-end"></i>
                                     </a>
@@ -536,7 +528,7 @@
                                         @foreach ($categories as $category)
                                             @if ($category->parent_id == $parent->id)
                                                 <li>
-                                                    <a href="single-product.html" title="">
+                                                    <a href="{{ route('category_products',$category->id) }}" title="">
                                                         {{ $category->title }} 
                                                     </a>
                                                 </li>
@@ -572,7 +564,7 @@
                             <!--Navbar Item Child:start-->
                             @foreach ($brands as $brand)
                                 <li class="nav-item-submenu-child">
-                                    <a href="single-product.html" class="fw-bold" title="">
+                                    <a href="{{ route('brand_products',$brand->id) }}" class="fw-bold" title="">
                                         {{ $brand->title }}
                                     </a>
                                 </li>
@@ -864,6 +856,22 @@
 <!--Index JS:start Only for this page-->
 <script src="{{asset('user_assets/js/index.js')}}"></script>
 <!--Index JS:end Only for this page-->
+
+<!--Jquery::start (!Only For product Page!)-->
+<script src="{{asset('user_assets/js/vendors/jquery/jquery-3.6.0.min.js')}}"></script>
+
+{{-- <!--Jquery DataTables:start-->
+<script src="{{asset('user_assets/js/vendors/jquery/jquery.dataTables.min.js.js')}}"></script>
+<!--Jquery DataTables:end--> --}}
+
+{{-- <!--DataTables:start-->
+<script src="{{asset('user_assets/js/vendors/dataTables/dataTables.responsive.min.js')}}"></script>
+<!--DataTables:end--> --}}
+
+<script src="{{asset('user_assets/js/products.js')}}"></script>
+
+<script src="{{asset('user_assets/js/vendors/xzoom/xzoom.min.js')}}"></script>
+
 </body>
 <!--Body::end-->
 

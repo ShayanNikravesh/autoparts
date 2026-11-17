@@ -1,10 +1,22 @@
 <?php
 
+use App\Http\Controllers\User\ProductController;
 use Illuminate\Support\Facades\Route;
 
 //Admin Subdomain
 Route::domain('admin.autoparts.test')->middleware('web')->group(base_path('routes/admin.php'));
 
+//Index
 Route::get('/', function () {
     return view('user.index');
-});
+})->name('user_index');
+
+//Category Products
+Route::get('category/{id}',[ProductController::class,'category'])->name('category_products');
+
+//Brand Products
+Route::get('brand/{id}',[ProductController::class,'brand'])->name('brand_products');
+
+//Single Product
+Route::get('product/{id}',[ProductController::class,'show'])->name('single_product');
+
