@@ -1797,9 +1797,12 @@ p {
   border-left: 0;
 }
 .search .products .product-item {
-  border-left: 1px solid #F1F2F4;
-  border-bottom: 1px solid #F1F2F4;
+  border-left: 4px solid #F1F2F4;
+  border-bottom: 4px solid #F1F2F4;
 }
+/* .search .products .product-item {
+  border: 2px #000;
+}  */
 .search .products .product-item .product-item-img {
   margin-bottom: 10px;
 }

@@ -80,7 +80,7 @@
     
         <!--Filter Button:start-->
         <div class="d-grid gap-2 mt-3">
-            <button type="submit" class="btn custom-btn-primary">
+            <button type="submit" class="btn bg-dark-blue text-white">
                 <i class="fa fa-filter"></i>
                 فیلتر کن!
             </button>

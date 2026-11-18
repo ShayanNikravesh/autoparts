@@ -101,7 +101,7 @@ return [
         'array' => 'فیلد :attribute نباید بیش از :max مورد داشته باشد.',
         'file' => 'فیلد :attribute نباید بیشتر از :max کیلوبایت باشد.',
         'numeric' => 'فیلد :attribute نباید بزرگ‌تر از :max باشد.',
-        'string' => 'فیلد :attribute نباید بیش از :max نویسه داشته باشد.',
+        'string' => 'فیلد :attribute نباید بیش از :max کاراکتر داشته باشد.',
     ],
     'max_digits' => 'فیلد :attribute نباید بیش از :max رقم داشته باشد.',
     'mimes' => 'فیلد :attribute باید فایلی با یکی از این نوع‌ها باشد: :values.',
@@ -110,7 +110,7 @@ return [
         'array' => 'فیلد :attribute باید دست‌کم :min مورد داشته باشد.',
         'file' => 'فیلد :attribute باید دست‌کم :min کیلوبایت باشد.',
         'numeric' => 'فیلد :attribute باید دست‌کم :min باشد.',
-        'string' => 'فیلد :attribute باید دست‌کم :min نویسه داشته باشد.',
+        'string' => 'فیلد :attribute باید دست‌کم :min کاراکتر داشته باشد.',
     ],
     'min_digits' => 'فیلد :attribute باید دست‌کم :min رقم داشته باشد.',
     'missing' => 'فیلد :attribute باید خالی باشد.',
@@ -219,6 +219,7 @@ return [
         'review' => 'بررسی',
         'stock' => 'تعداد',
         'price_discounted' => 'قیمت با تخفیف',
+        'message' => 'متن پیام',
     ],
 
 

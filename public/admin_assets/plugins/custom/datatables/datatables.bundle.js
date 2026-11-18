@@ -11638,8 +11638,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "(filtered from _MAX_ total entries)",
-	
+			"sInfoFiltered": "(فیلترشده از مجموع  _MAX_ مورد)",
 	
 			/**
 			 * If can be useful to append extra information to the info string at times,
