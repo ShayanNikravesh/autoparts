@@ -26,10 +26,10 @@ class StoreMessageRequest extends FormRequest
         Alert::error('عملیات ناموفق');
         
         return [
-            'first_name' => ['required','string'],
-            'last_name' => ['required','string'],
+            'first_name' => ['required','string','max:50'],
+            'last_name' => ['required','string','max:50'],
             'mobile'=>['required','regex:/^(\+98|98|0)9\d{9}$/','string'],
-            'message'=>['required','string'],
+            'message'=>['required','string','max:1000'],
         ];
     }
 }

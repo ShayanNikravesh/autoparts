@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\BannerControlller;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ManagerController;
+use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Models\Photo;
@@ -53,5 +54,8 @@ Route::resources([
     
     //Manager
     'managers' => ManagerController::class,
+
+    //Message
+    'messages' => MessageController::class,
 
 ]);
