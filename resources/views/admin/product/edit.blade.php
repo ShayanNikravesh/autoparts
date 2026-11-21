@@ -58,11 +58,11 @@
                         <div class="form-group row">
                             <div class="col-lg-6">
                                 <label>قیمت:</label>
-                                <input type="number" name="price" class="form-control" min="100000" step="50000" value="{{$product->price}}">
+                                <input type="number" name="price" class="form-control" min="500000" step="100000" value="{{$product->price}}">
                             </div>
                             <div class="col-lg-6">
                                 <label>قیمت با تخفیف:</label>
-                                <input type="number" name="price_discounted" class="form-control" step="50000" value="{{$product->price_discounted}}">
+                                <input type="number" name="price_discounted" class="form-control" step="100000" value="{{$product->price_discounted}}">
                             </div>
                         </div>
                         <div class="form-group row">

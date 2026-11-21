@@ -85,11 +85,11 @@
                         <div class="form-group row justify-content-center">
                             <div class="col-lg-3">
                                 <label><span class="text-danger">*</span> قیمت :</label>
-                                <input type="number" name="price" class="form-control" placeholder="قیمت را وارد کنید..."  min="100000" step="50000">
+                                <input type="number" name="price" class="form-control" placeholder="قیمت را وارد کنید..."  min="500000" step="100000">
                             </div>
                             <div class="col-lg-3">
                                 <label><span class="text-danger">*</span> قیمت با تخفیف :</label>
-                                <input type="number" name="price_discounted" class="form-control" placeholder="قیمت با تخفیف را وارد کنید..." step="50000" value="0">
+                                <input type="number" name="price_discounted" class="form-control" placeholder="قیمت با تخفیف را وارد کنید..." step="100000" value="0">
                             </div>
                             <div class="col-lg-3">
                                 <label><span class="text-danger">*</span> موجودی :</label>
