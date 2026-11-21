@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateManagerRequest;
 use App\Models\Manager;
 use App\Models\Photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
@@ -72,7 +73,7 @@ class ManagerController extends Controller
      */
     public function edit(string $id)
     {
-        //$id = Auth::guard('admin')->user()->id;
+        $id = Auth::guard('admin')->user()->id;
         $manager = Manager::findOrFail($id);
         return view('admin.manager.edit',compact('manager'));
     }
@@ -85,7 +86,7 @@ class ManagerController extends Controller
         
         Alert::error('عملیات ناموفق');
         
-        //$id = Auth::guard('admin')->user()->id;
+        $id = Auth::guard('admin')->user()->id;
         $manager = Manager::findOrfail($id);
         
         $request -> validate([

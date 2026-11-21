@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BannerControlller;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
@@ -11,51 +12,67 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Models\Photo;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('admin.index');
-})->name('admin_index');
+//Admin Auth
+Route::get('Login',[AuthController::class,'login'])->name('login');
 
-//Change Status
-Route::post('category/ChangeStatus/{id}',[CategoryController::class,'ChangeStatus'])->name('change_Status_category');
-Route::post('brand/ChangeStatus/{id}',[BrandController::class,'ChangeStatus'])->name('change_Status_brand');
-Route::post('article/ChangeStatus/{id}',[ArticleController::class,'ChangeStatus'])->name('change_Status_article');
-Route::post('manager/ChangeStatus/{id}',[ManagerController::class,'changeStatus'])->name('change_Status_manager');
-Route::post('product/ChangeStatus/{id}/{status}',[ProductController::class,'changeStatus'])->name('change_Status_product');
+Route::post('auth',[AuthController::class,'authenticate'])->name('sign_in');
 
-//Change Level
-Route::post('manager/ChangeLevel/{id}',[ManagerController::class,'ChangeLevel'])->name('change_Level_manager');
+Route::middleware('auth:admin')->group(function () {
 
-//Show Photo
-Route::get('product/{id}/photos',[ProductController::class,'showProductPhoto'])->name('show_product_photo');
-Route::get('banner/{id}/photos',[BannerControlller::class,'show'])->name('show_banner_photo');
+    //Dashboard
+    Route::get('/', function () {
+        return view('admin.index');
+    })->name('dashboard');
 
-//Store Photo
-Route::post('article/photo',[ArticleController::class,'storePhoto'])->name('store_article_photo');
-Route::post('product/photo',[ProductController::class,'storePhoto'])->name('store_product_photo');
-Route::post('banner/photo',[BannerControlller::class,'storePhoto'])->name('store_banner_photo');
+    //Logout
+    Route::post('/admin_logout', [AuthController::class, 'logout'])->name('admin_logout');
 
-//Delete Photo
-Route::delete('photo/{id}',[PhotoController::class,'delete'])->name('delete_photo');
+    //Change Status
+    Route::post('category/ChangeStatus/{id}',[CategoryController::class,'ChangeStatus'])->name('change_Status_category');
+    Route::post('brand/ChangeStatus/{id}',[BrandController::class,'ChangeStatus'])->name('change_Status_brand');
+    Route::post('article/ChangeStatus/{id}',[ArticleController::class,'ChangeStatus'])->name('change_Status_article');
+    Route::post('manager/ChangeStatus/{id}',[ManagerController::class,'changeStatus'])->name('change_Status_manager');
+    Route::post('product/ChangeStatus/{id}/{status}',[ProductController::class,'changeStatus'])->name('change_Status_product');
 
-//Resources
-Route::resources([
+    //Change Level
+    Route::post('manager/ChangeLevel/{id}',[ManagerController::class,'ChangeLevel'])->name('change_Level_manager');
 
-    //Category
-    'categories' => CategoryController::class,
+    //Show Photo
+    Route::get('product/{id}/photos',[ProductController::class,'showProductPhoto'])->name('show_product_photo');
+    Route::get('banner/{id}/photos',[BannerControlller::class,'show'])->name('show_banner_photo');
 
-    //Brand
-    'brands' => BrandController::class,
+    //Store Photo
+    Route::post('article/photo',[ArticleController::class,'storePhoto'])->name('store_article_photo');
+    Route::post('product/photo',[ProductController::class,'storePhoto'])->name('store_product_photo');
+    Route::post('banner/photo',[BannerControlller::class,'storePhoto'])->name('store_banner_photo');
 
-    //Article
-    'articles' => ArticleController::class,
+    //Delete Photo
+    Route::delete('photo/{id}',[PhotoController::class,'delete'])->name('delete_photo');
 
-    //Product
-    'products' => ProductController::class,
-    
-    //Manager
-    'managers' => ManagerController::class,
+    //Resources
+    Route::resources([
 
-    //Message
-    'messages' => MessageController::class,
+        //Category
+        'categories' => CategoryController::class,
 
-]);
+        //Brand
+        'brands' => BrandController::class,
+
+        //Article
+        'articles' => ArticleController::class,
+
+        //Product
+        'products' => ProductController::class,
+        
+        //Manager
+        'managers' => ManagerController::class,
+
+        //Message
+        'messages' => MessageController::class,
+
+    ]);
+
+});
+
+
+

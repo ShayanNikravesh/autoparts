@@ -2,7 +2,7 @@
     <!--begin::Brand-->
     <div class="brand flex-column-auto" id="kt_brand">
         <!--begin::Logo-->
-        <a href="{{ route('admin_index') }}" class="brand-logo">
+        <a href="{{ route('dashboard') }}" class="brand-logo">
             <img alt="Logo" src="{{asset('admin_assets/media/logos/admin.png')}}" />
         </a>
         <!--end::Logo-->
@@ -30,7 +30,7 @@
             <!--begin::Menu Nav-->
             <ul class="menu-nav">
                 <li class="menu-item menu-item-submenu" aria-haspopup="true">
-                    <a href="{{ route('admin_index') }}" class="menu-link">
+                    <a href="{{ route('dashboard') }}" class="menu-link">
                         <span class="svg-icon menu-icon">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
