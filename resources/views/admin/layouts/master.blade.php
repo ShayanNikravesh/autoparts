@@ -265,11 +265,14 @@ License: You must have a valid license purchased only from themeforest(the above
 				responsive: true
 			})
 		</script>
-		{{-- <script>
+
+		<!--Inspect-->
+		<script>
 			document.addEventListener('contextmenu', function (event) {
 				event.preventDefault();
 			});
-		</script> --}}
+		</script>
+		
 		@sweetAlert
 	</body>
 	<!--end::Body-->

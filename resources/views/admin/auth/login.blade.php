@@ -90,6 +90,12 @@
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="{{ asset('admin_assets/js/pages/custom/login/login-general.js') }}"></script>
 		<!--end::Page Scripts-->
+		<!--Inspect-->
+		<script>
+			document.addEventListener('contextmenu', function (event) {
+				event.preventDefault();
+			});
+		</script>
 	</body>
 	<!--end::Body-->
 </html>

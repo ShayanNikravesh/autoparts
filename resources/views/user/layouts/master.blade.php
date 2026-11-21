@@ -768,12 +768,12 @@
 
 <script src="{{asset('user_assets/js/vendors/xzoom/xzoom.min.js')}}"></script>
  
-{{-- <script>
+<!--Inspect-->
+<script>
     document.addEventListener('contextmenu', function (event) {
         event.preventDefault();
     });
-</script> --}}
-
+</script>
 
 @sweetAlert
 </body>
