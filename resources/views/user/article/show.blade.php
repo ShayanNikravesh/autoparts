@@ -8,7 +8,7 @@
     <nav class="my-4">
         <ol class="breadcrumb">
             {{-- <li class="breadcrumb-item fs-8"><a href="javascript:;">آیتی لند</a></li> --}}
-            <li class="breadcrumb-item fs-8"><a href="{{route('blogs')}}">وبلاگ</a></li>
+            <li class="breadcrumb-item fs-8"><a href="{{route('blog')}}">وبلاگ</a></li>
             <li class="breadcrumb-item fs-8"><a href="javascript:;">تک مطلب</a></li>
         </ol>
     </nav>

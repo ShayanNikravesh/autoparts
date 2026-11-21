@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="{{asset('user_assets/css/vendors/jquery/jquery.dataTables.min.css')}}">
     <!--Single product-->
     <link rel="stylesheet" href="{{asset('user_assets/css/vendors/xzoom/xzoom.min.css')}}">
+
+    <link rel="icon" href="{{ asset('user_assets/img/logos/favicon.ico') }}">
+
 </head>
 <!--Head::end-->
 
@@ -30,17 +33,17 @@
 <body>
 @routes
 <!--Loader:start-->
-<div class="loader mt-5">
+{{-- <div class="loader mt-5">
     <div class="custom-navbar">
         <!--Navbar Mobile In Loader:start-->
         <div class="top-navbar">
-            <!--        Top Mobile Navbar In Mobile :start-->
+            <!--Top Mobile Navbar In Mobile :start-->
             <div class="top-mobile-navbar py-1 border-bottom-gray-150">
-                <!--        Container:start-->
+                <!--Container:start-->
                 <div class="container d-flex justify-content-between align-items-center">
-                    <!--        Top Mobile Navbar Right:start-->
+                    <!--Top Mobile Navbar Right:start-->
                     <div class="top-mobile-navbar-right d-flex justify-content-between align-items-center">
-                        <!--            Humber Btn:start-->
+                        <!--Humber Btn:start-->
                         <!--begin::Svg Icon-->
                         <svg class="blur-up" xmlns="http://www.w3.org/2000/svg"
                              xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -52,17 +55,18 @@
                                 <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z"
                                       fill="#000000" opacity="0.3"/>
                             </g>
-                        </svg><!--end::Svg Icon-->
+                        </svg>
+                        <!--end::Svg Icon-->
 
-                        <!--            Humber Btn:end-->
+                        <!--Humber Btn:end-->
                     </div>
                     <!--Top Mobile Navbar Right:end-->
 
                     <!--Top Mobile Navbar Middle:start-->
                     <div class="top-mobile-navbar-middle d-flex justify-content-between align-items-center">
-                        <!--            Logo:start-->
+                        <!--Logo:start-->
                         <a href="javascript:void(0)" class="navbar-brand">
-                            <img src="{{asset('user_assets/img/logo.png')}}" alt="لوگو" class="blur-up">
+                            <img src="{{asset('user_assets/img/logos/Logo.PNG')}}" alt="لوگو" class="blur-up">
                         </a>
                         <!--Logo:end-->
                     </div>
@@ -90,50 +94,50 @@
             <!--Top Mobile Navbar In Mobile:end-->
         </div>
         <div class="main-navbar pt-1">
-            <!--        Main Mobile Navbar:start-->
+            <!--Main Mobile Navbar:start-->
             <div class="main-mobile-navbar py-2">
-                <!--        Container:start-->
+                <!--Container:start-->
                 <div class="container d-flex justify-content-between align-items-center">
-                    <!--            Main Mobile Navbar Right:start-->
+                    <!--Main Mobile Navbar Right:start-->
                     <div class="main-mobile-navbar-right">
-                        <!--            Search Form:start-->
+                        <!--Search Form:start-->
                         <form action="javascript:void(0)" class="position-relative">
                             <input class="form-control border-0 fs-6 fw-normal bg-gray-150 border-radius-xl py-2" type="search" placeholder="جستجو">
                             <button class="btn position-absolute" type="submit">
                                 <i class="fab fa-sistrix gray-500 fw-md fs-5 blur-up"></i>
                             </button>
                         </form>
-                        <!--            Search Form:end-->
+                        <!--Search Form:end-->
                     </div>
-                    <!--            Main Mobile Navbar Right:end-->
+                    <!--Main Mobile Navbar Right:end-->
 
-                    <!--            Main Mobile Navbar Left:start-->
+                    <!--Main Mobile Navbar Left:start-->
                     <div class="main-mobile-navbar-left">
-                        <!--            Login and Register:start-->
+                        <!--Login and Register:start-->
                         
-                        <!--            Login and Register:end-->
+                        <!--Login and Register:end-->
 
-                        <!--            Shopping Cart Button:start-->
+                        <!--Shopping Cart Button:start-->
                         
-                        <!--            Shopping Cart Button:end-->
+                        <!--Shopping Cart Button:end-->
                     </div>
-                    <!--            Main Mobile Navbar Left:end-->
+                    <!--Main Mobile Navbar Left:end-->
                 </div>
-                <!--        Container:end-->
+                <!--Container:end-->
             </div>
-            <!--        Main Mobile Navbar:end-->
+            <!--Main Mobile Navbar:end-->
         </div>
         <!--Navbar Mobile In Loader:end-->
 
         <!--Top Navbar In Loader::start-->
         <div class="top-navbar navbar-expand-lg navbar-light py-2">
-            <!--        Container:start-->
+            <!--Container:start-->
             <div class="container d-flex justify-content-between align-items-center">
-                <!--        Top Navbar Right:start-->
+                <!--Top Navbar Right:start-->
                 <div class="top-nav-right d-flex justify-content-between align-items-center">
                     <!--Logo:start-->
                     <a href="javascript:void(0)" class="navbar-brand">
-                        <img src="{{asset('user_assets/img/logo/Logo.PNG')}}" alt="لوگو" class="blur-up">
+                        <img src="{{asset('user_assets/img/logos/Logo.PNG')}}" alt="لوگو" class="blur-up">
                     </a>
                     <!--Logo:end-->
 
@@ -146,13 +150,13 @@
                     </form>
                     <!--Search Form:end-->
                 </div>
-                <!--        Top Navbar Right:end-->
+                <!--Top Navbar Right:end-->
 
-                <!--        Top Navbar Left:start-->
+                <!--Top Navbar Left:start-->
                 
-                <!--        Top Navbar Left:end-->
+                <!--Top Navbar Left:end-->
             </div>
-            <!--        Container:end-->
+            <!--Container:end-->
         </div>
         <!--Top Navbar In Loader::end-->
 
@@ -181,7 +185,7 @@
                             <a class="mx-2 py-2" href="javascript:void(0)">دسته بندی کالاها</a>
                             <!--            Navbar Item:start-->
                             <span class="horizontal-line mx-1 me-2"></span>
-                            <!--            Navbar Item:end-->
+                            <!--Navbar Item:end-->
                         </li>
                         <!--Navbar Item:end-->
                     </ul>
@@ -233,7 +237,7 @@
     <!--    Banners In Loader:end don't change if you only the back-end programmer-->
 
 
-</div>
+</div> --}}
 <!--Loader:end-->
 
 <!--Navbar:start-->
@@ -252,7 +256,7 @@
             <div class="top-nav-right d-flex justify-content-between align-items-center">
                 <!--Logo:start-->
                 <a href="{{ route('user_index') }}" class="navbar-brand" title="">
-                    <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.PNG')}}" style="width :45px" alt="لوگو">
+                    <img class="border-radius-circle" src="{{asset('user_assets/img/logos/Logo.PNG')}}" style="width: 30px; height: 30px" alt="لوگو">
                 </a>
                 <!--Logo:end-->
                 
@@ -397,7 +401,7 @@
                                     <!--Navbar Items Child:end-->
                                 </li>
                                 <li class="border-bottom-gray-150 px-2 py-3">
-                                    <a href="{{ route('index') }}" class="fs-6 fw-bold d-block showSubMenu">
+                                    <a href="{{ route('blog') }}" class="fs-6 fw-bold d-block showSubMenu">
                                         <!--begin::Svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
                                             <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
@@ -452,18 +456,19 @@
                 <div class="top-mobile-navbar-left">
                     {{-- <a href="faq.html" title="">
                         <!--begin::Svg Icon-->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                             height="24px" viewBox="0 0 24 24" version="1.1">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <rect x="0" y="0" width="24" height="24"/>
-                                <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
-                                <path d="M12,16 C12.5522847,16 13,16.4477153 13,17 C13,17.5522847 12.5522847,18 12,18 C11.4477153,18 11,17.5522847 11,17 C11,16.4477153 11.4477153,16 12,16 Z M10.591,14.868 L10.591,13.209 L11.851,13.209 C13.447,13.209 14.602,11.991 14.602,10.395 C14.602,8.799 13.447,7.581 11.851,7.581 C10.234,7.581 9.121,8.799 9.121,10.395 L7.336,10.395 C7.336,7.875 9.31,5.922 11.851,5.922 C14.392,5.922 16.387,7.875 16.387,10.395 C16.387,12.915 14.392,14.868 11.851,14.868 L10.591,14.868 Z"
-                                      fill="#000000"/>
-                            </g>
-                        </svg><!--end::Svg Icon-->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24"/>
+                                    <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
+                                    <path d="M12,16 C12.5522847,16 13,16.4477153 13,17 C13,17.5522847 12.5522847,18 12,18 C11.4477153,18 11,17.5522847 11,17 C11,16.4477153 11.4477153,16 12,16 Z M10.591,14.868 L10.591,13.209 L11.851,13.209 C13.447,13.209 14.602,11.991 14.602,10.395 C14.602,8.799 13.447,7.581 11.851,7.581 C10.234,7.581 9.121,8.799 9.121,10.395 L7.336,10.395 C7.336,7.875 9.31,5.922 11.851,5.922 C14.392,5.922 16.387,7.875 16.387,10.395 C16.387,12.915 14.392,14.868 11.851,14.868 L10.591,14.868 Z"
+                                        fill="#000000"/>
+                                </g>
+                            </svg>
+                        <!--end::Svg Icon-->
                     </a> --}}
                     <a href="{{ route('user_index') }}" class="navbar-brand pb-2" title="">
-                        <img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.PNG')}}" style="width :45px" alt="لوگو">
+                        <img class="border-radius-circle" src="{{asset('user_assets/img/logos/Logo.PNG')}}" style="width :45px" alt="لوگو">
                     </a>
                 </div>
                 <!--Top Mobile Navbar Left:end-->
@@ -565,7 +570,7 @@
                     <!--Navbar Item:end-->
                     <!--Navbar Item:start-->
                     <li class="nav-item d-flex justify-content-between align-items-center position-relative">
-                        <a class="mx-2 py-2" href="{{ route('index') }}" title="">
+                        <a class="mx-2 py-2" href="{{ route('blog') }}" title="">
                             <!--begin::Svg Icon-->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
                                 <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
@@ -660,8 +665,8 @@
             <!--Footer Top Detail:start-->
             <div class="footer-top-detial d-flex justify-content-between align-items-center">
                 <div class="">
-                    <a href="" title=""><img class="border-radius-circle" src="{{asset('user_assets/img/logo/Logo.PNG')}}" style="width :45px" alt=""></a>
-                    <p class="mt-2 fs-7">تلفن پشتیبانی : 05144445697</p>
+                    <a href="{{ route('user_index') }}" title=""><img class="border-radius-circle" src="{{asset('user_assets/img/logos/Logo.PNG')}}" style="width: 30px; height: 30px" alt=""></a>
+                    <p class="mt-2 fs-7">تلفن : 09125786982</p>
                 </div>
                 <a href="#top" class="back-to-top border-radius-xl px-3 py-2 gray-600 fs-7">
                     برگشت به بالا
@@ -675,12 +680,9 @@
         <div class="footer-main my-5">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 mb-3">
-                    <h1 class="fw-bold fs-5">فروشگاه اینترنتی برگشاپ، بررسی، انتخاب و خرید آنلاین.</h1>
+                    <h1 class="fw-bold fs-5">آدرس فروشگاه :</h1>
                     <p class="gray-600 mt-3 fs-7">
-                        خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای قیمت مناسب
-                        را در مدت زمانی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛ ویژگی‌هایی که
-                        فروشگاه اینترنتی دیجی‌کالا سال‌هاست بر روی آن‌ها کار کرده و توانسته از این طریق مشتریان ثابت خود
-                        را داشته باشد.
+                        تهران ـ خیابان امیر کبیر ـ بعد از خیابان ملت ـ پاساژ کاشانی
                     </p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4">
@@ -696,32 +698,10 @@
             </div>
         </div>
     </div>
-    {{-- <div class="footer-info py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 mb-3">
-                    <h1 class="fw-bold fs-5">فروشگاه اینترنتی برگشاپ، بررسی، انتخاب و خرید آنلاین.</h1>
-                    <p class="gray-600 mt-3 fs-7">
-                        خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای قیمت مناسب
-                        را در مدت زمانی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛ ویژگی‌هایی که
-                        فروشگاه اینترنتی دیجی‌کالا سال‌هاست بر روی آن‌ها کار کرده و توانسته از این طریق مشتریان ثابت خود
-                        را داشته باشد.
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mb-3 d-flex justify-content-evenly align-items-center">
-                    <img src="{{asset('user_assets/img/symbol-01.png')}}" alt="" title=""
-                         class="img-fluid border border-gray-200 border-radius-xl">
-                    <img src="{{asset('user_assets/img/symbol-02.png')}}" alt="" title=""
-                         class="img-fluid border border-gray-200 border-radius-xl">
-                </div>
-            </div>
-        </div>
-    </div> --}}
     <div class="footer-copyright text-center py-4">
         <div class="container">
             <p class="fs-8 gray-600">
-                برای استفاده از مطالب برگشاپ، داشتن «هدف غیرتجاری» و ذکر «منبع» کافیست. تمام حقوق اين وب‌سايت نیز برای
-                شرکت برگزیت است.
+              طراحی شده توسط شایان نیک روش
             </p>
         </div>
     </div>
@@ -787,6 +767,13 @@
 <script src="{{asset('user_assets/js/products.js')}}"></script>
 
 <script src="{{asset('user_assets/js/vendors/xzoom/xzoom.min.js')}}"></script>
+ 
+{{-- <script>
+    document.addEventListener('contextmenu', function (event) {
+        event.preventDefault();
+    });
+</script> --}}
+
 
 @sweetAlert
 </body>

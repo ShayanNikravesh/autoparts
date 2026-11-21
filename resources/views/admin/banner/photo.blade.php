@@ -48,14 +48,13 @@
                         @foreach ($banner->photos as $photo)
                             <div class="col-md-5 text-center mb-4" id="photo{{$photo->id}}">
                                 <div class="image-input image-input-outline w-100">
-                                    <span class="form-text font-weight-bold"><<{{++$loop->index}}>></span>
+                                    <span class="form-text font-weight-bold"><< {{++$loop->index}} >></span>
                                     <br>
-                                    <div class="image-input-wrapper w-100 img-fluid" style="background-image: url('{{asset($photo->src)}}');"></div>
+                                    <div class="image-input-wrapper w-100" style="background-image: url('{{asset($photo->src)}}');"></div>
                                     <a class="btn btn-hover-icon-danger" href="{{route('delete_photo',$photo->id)}}" method="POST" data-toggle="tooltip" data-placement="bottom" title="حذف عکس" data-confirm-delete="true">
                                         <i class="fa fa-trash"></i></button>
                                     </a>
                                     <hr>
-                                    <!--<label class="btn btn-xs btn-icon btn-circle btn-dark btn-hover-text-primary btn-shadow" data-action="delete" data-toggle="tooltip" title="" data-original-title="Delete"><i class="fa fa-trash-alt icon-sm text-muted"></i></label>-->
                                 </div>
                             </div>
                         @endforeach

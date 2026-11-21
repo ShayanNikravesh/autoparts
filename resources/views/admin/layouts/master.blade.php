@@ -45,7 +45,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--Iranyekan Font-->
 		<link href="{{asset('admin_assets/plugins/global/font.css')}}" rel="stylesheet" type="text/css" />
 		<!--Iranyekan Font-->
-		<link rel="shortcut icon" href="{{asset('admin_assets/media/logos/iconco.ico')}}" />
+		
+		<link rel="shortcut icon" href="{{asset('admin_assets/media/logos/favicon.ico')}}" />
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -55,8 +56,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Header Mobile-->
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 			<!--begin::Logo-->
-			<a href="">
-				<img alt="Logo" src="{{asset('admin_assets/media/logos/logo-letter.png')}}" />
+			<a href="{{ route('admin_index') }}">
+				<img alt="Logo" src="{{asset('admin_assets/media/logos/admin.png')}}" />
 			</a>
 			<!--end::Logo-->
 			<!--begin::Toolbar-->
@@ -286,6 +287,11 @@ License: You must have a valid license purchased only from themeforest(the above
 				responsive: true
 			})
 		</script>
+		{{-- <script>
+			document.addEventListener('contextmenu', function (event) {
+				event.preventDefault();
+			});
+		</script> --}}
 		@sweetAlert
 	</body>
 	<!--end::Body-->

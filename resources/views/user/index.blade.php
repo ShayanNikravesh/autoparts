@@ -3,7 +3,7 @@
 @section('content')
     <!--Story Section:start-->
     <div class="container mt-xxxx-large">
-        <div class="story-section my-3 text-center px-5">
+        {{-- <div class="story-section my-3 text-center px-5">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-around align-items-center mb-3">
                     <!--                Story Item:start-->
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <!--        Show Story Details:end-->
-        </div>
+        </div> --}}
     </div>
     <!--Story Section:end-->
 
@@ -123,7 +123,8 @@
             </div>
             <!-- Slider:end -->
         </header>
-        <!--Best Suggestions:start-->
+
+        <!--Discounted Products:start-->
         <div class="best-suggestions border-radius-2xl py-1">
             <!-- Slider:start -->
             <div class="swiper bestSuggestionsSlider">
@@ -133,7 +134,7 @@
                         <img src="{{asset('user_assets/img/box.png')}}" alt="" class="box-img d-block">
                         <a href="{{ route('discounted_products') }}" class="text-white d-block mt-3" title="">مشاهده همه <i class="fa fa-angle-left align-baseline ms-1"></i></a>
                     </div>
-                    @foreach ($products as $product)
+                    @foreach ($discounted_products as $product)
                         <div class="swiper-slide">
                             @php
                                 $photo = $product->photos->first();
@@ -161,422 +162,210 @@
             </div>
             <!-- Slider:end -->
         </div>
-        <!--Best Suggestions:End-->
+        <!--Discounted Products:End-->
 
         <!--Banners:start-->
         <div class="banners my-5">
             <div class="row">
                 @foreach ($medium_banner->photos as $photo)
-                <div class="col-6 mb-3">
-                    <a href="javascript:;" title="">
-                        <img src="{{asset($photo->src)}}" alt="" class="img-fluid border-radius-3xl img-opacity">
-                    </a>
-                </div>
+                    <div class="col-6 mb-3">
+                        <a href="javascript:;" title="">
+                            <img src="{{asset($photo->src)}}" alt="" class="img-fluid border-radius-3xl img-opacity">
+                        </a>
+                    </div>
                 @endforeach
             </div>
         </div>
         <!--Banners:end-->
 
-        <!--    Categories:start-->
+        <hr>
+        <!--Categories:start-->
         <section class="categories mt-5">
-            <h2 class="text-center fs-4">دسته بندی ها</h2>
+            <h2 class="text-center fs-4">دسته بندی ها :</h2>
             <div class="row mt-5">
                 <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 offset-sm-0 offset-md-0 offset-lg-2 offset-xl-2 mb-3">
-                    <!--                Row:start-->
+                    <!--Row:start-->
                     <div class="row">
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-1.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">خانه و آشپرخانه</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-2.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">اسباب بازی</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-3.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">شخصی</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-4.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">ورزش</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-5.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">ورزش</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
-                        <div class="clearfix"></div>
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-6.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">خانه و آشپرخانه</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-7.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">اسباب بازی</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-8.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">شخصی</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-9.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">ورزش</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
-                        <!--                Category Item:start-->
-                        <div class="col-4 col-lg-2 col-xl-2 mb-4">
-                            <a href="" title="">
-                                <img src="{{asset('user_assets/img/category-10.jpg')}}" alt="" class="img-fluid img-opacity">
-                                <strong class="text-center d-block fs-7">ورزش</strong>
-                            </a>
-                        </div>
-                        <!--                Category Item:end-->
+                        @foreach ($categories as $category)
+                            <!--Category Item:start-->
+                            <div class="col-4 col-lg-2 col-xl-2 mb-4">
+                                <a href="{{ route('category_products',$category->id) }}" title="">
+                                    <strong class="text-center d-block fs-7">{{ $category->title }} </strong>
+                                </a>
+                            </div>
+                            <!--Category Item:end-->
+                        @endforeach
                     </div>
-                    <!--                Row:end-->
+                    <!--Row:end-->
                 </div>
             </div>
         </section>
-        <!--    Categories:end-->
-
-        <!--    Banners:start-->
-        <div class="banners my-5">
+        <!--Categories:end-->
+        <hr>
+        <!--Small Banners:start-->
+        <div class="banners mt-4">
             <div class="row">
-                <div class="col-6">
-                    <a href="" title="">
-                        <img src="{{asset('user_assets/img/banner-md-1.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
-                    </a>
-                </div>
-                <div class="col-6">
-                    <a href="" title="">
-                        <img src="{{asset('user_assets/img/banner-md-2.jpg')}}" alt="" class="img-fluid border-radius-3xl img-opacity">
-                    </a>
-                </div>
+                @foreach ($small_banner->photos as $photo)
+                    <div class="col-6 col-lg-3 col-xl-3 mb-3">
+                        <a href="javascript:;" title="">
+                            <img src="{{asset($photo->src)}}" alt="" class="img-fluid border-radius-3xl img-opacity">
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
-        <!--    Banners:end-->
+        <!--Small Banners:end-->
 
-        <!--Suggestions:start-->
-        {{-- <section class="suggestions">
-            <h2 class="text-center fs-4">پیشنهاد برگ شاپ</h2>
+        <!--Recent Products:start-->
+        <section class="suggestions">
+            <h2 class="text-center fs-4">جدید ترین ها :</h2>
             <div class="wrapper mt-4 border-radius-3xl border border-gray-300 overflow-hidden">
-
                 <div class="row">
-                    <div class="suggest-item col-6 col-md-4 col-lg-2 col-xl-2">
-                        <div class="p-3">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/suggest-1.jpg')}}" alt="" title="" class="img-fluid p-1">
-                                <h4 class="mt-3 fs-7">گوشی</h4>
-                            </a>
+                    @foreach ($recent_products as $product)
+                        @php
+                            $photo = $product->photos->first();
+                        @endphp
+                        <div class="suggest-item col-6 col-md-4 col-lg-2 col-xl-2">
+                            <div class="p-3">
+                                <a target="_blank" href="{{ route('single_product',$product->tracking_code) }}" title="" class="stretched-link">
+                                    @isset($photo)
+                                        <img src="{{asset($photo->src)}}" alt="" title="" class="img-fluid p-1">
+                                    @endisset
+                                    <h4 class="mt-3 fs-7">{{ $product->title }}</h4>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="suggest-item col-6 col-md-4 col-lg-2 col-xl-2">
-                        <div class="p-3">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/suggest-2.jpg')}}" alt="" title="" class="img-fluid p-1">
-                                <h4 class="mt-3 fs-7">گوشی</h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="suggest-item col-6 col-md-4 col-lg-2 col-xl-2">
-                        <div class="p-3">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/suggest-3.jpg')}}" alt="" title="" class="img-fluid p-1">
-                                <h4 class="mt-3 fs-7">گوشی</h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="suggest-item col-6 col-md-4 col-lg-2 col-xl-2">
-                        <div class="p-3">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/suggest-4.jpg')}}" alt="" title="" class="img-fluid p-1">
-                                <h4 class="mt-3 fs-7">گوشی</h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="suggest-item col-6 col-md-4 col-lg-2 col-xl-2">
-                        <div class="p-3">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/suggest-5.jpg')}}" alt="" title="" class="img-fluid p-1">
-                                <h4 class="mt-3 fs-7">گوشی</h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="suggest-item col-6 col-md-4 col-lg-2 col-xl-2">
-                        <div class="p-3">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/suggest-6.jpg')}}" alt="" title="" class="img-fluid p-1">
-                                <h4 class="mt-3 fs-7">گوشی</h4>
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-
             </div>
-        </section> --}}
-        <!--Suggestions:end-->
+        </section>
+        <!--Recent Products:end-->
 
-        <!--    Best Brands:start-->
+        <!--Best Brands:start-->
         <section class="best-brands border-radius-3xl border border-gray-300 mt-4 pb-4">
-            <!--        Section Title:start-->
+            <!--Section Title:start-->
             <h2 class="text-center my-4 section-title fs-4">
             برندها
             </h2>
-            <!--        Section Title:end-->
+            <!--Section Title:end-->
 
-            <!--            Slider:start-->
+            <!--Slider:start-->
             <div class="swiper brandsSlider">
                 <div class="swiper-wrapper">
 
-                    <!--            Brands Item:start-->
+                    <!--Brands Item:start-->
                     <div class="swiper-slide position-relative">
                         <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-1.png')}}" alt="" title="" class="img-fluid p-3">
+                            <a href="javascript:;" title="" class="stretched-link">
+                                <img src="" alt="" title="" class="img-fluid p-3">
                             </a>
                         </div>
                     </div>
-                    <!--            Brands Item:end-->
+                    <!--Brands Item:end-->
 
-                    <!--            Brands Item:start-->
+                    <!--Brands Item:start-->
                     <div class="swiper-slide position-relative">
                         <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-2.png')}}" alt="" title="" class="img-fluid p-3">
+                            <a href="javascript:;" title="" class="stretched-link">
+                                <img src="" alt="" title="" class="img-fluid p-3">
                             </a>
                         </div>
                     </div>
-                    <!--            Brands Item:end-->
-                    <!--            Brands Item:start-->
+                    <!--Brands Item:end-->
+                    <!--Brands Item:start-->
                     <div class="swiper-slide position-relative">
                         <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-3.png')}}" alt="" title="" class="img-fluid p-3">
+                            <a href="javascript:;" title="" class="stretched-link">
+                                <img src="{{asset('user_assets/img/brands/KIA.png')}}" alt="" title="" class="img-fluid p-3">
                             </a>
                         </div>
                     </div>
-                    <!--            Brands Item:end-->
-                    <!--            Brands Item:start-->
+                    <!--Brands Item:end-->
+                    <!--Brands Item:start-->
                     <div class="swiper-slide position-relative">
                         <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-4.png')}}" alt="" title="" class="img-fluid p-3">
+                            <a href="javascript:;" title="" class="stretched-link">
+                                <img src="" alt="" title="" class="img-fluid p-3">
                             </a>
                         </div>
                     </div>
-                    <!--            Brands Item:end-->
-                    <!--            Brands Item:start-->
+                    <!--Brands Item:end-->
+                    <!--Brands Item:start-->
                     <div class="swiper-slide position-relative">
                         <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-8.png')}}" alt="" title="" class="img-fluid p-3">
+                            <a href="javascript:;" title="" class="stretched-link">
+                                <img src="{{asset('user_assets/img/brands/Hyundai.png')}}" alt="" title="" class="img-fluid p-3">
                             </a>
                         </div>
                     </div>
-                    <!--            Brands Item:end-->
-                    <!--            Brands Item:start-->
+                    <!--Brands Item:end-->
+                    <!--Brands Item:start-->
                     <div class="swiper-slide position-relative">
                         <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-7.jpg')}}" alt="" title="" class="img-fluid p-3">
+                            <a href="javascript:;" title="" class="stretched-link">
+                                <img src="" alt="" title="" class="img-fluid p-3">
                             </a>
                         </div>
                     </div>
-                    <!--            Brands Item:end-->
-                    <!--            Brands Item:start-->
+                    <!--Brands Item:end-->
+                    <!--Brands Item:start-->
                     <div class="swiper-slide position-relative">
                         <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-8.png')}}" alt="" title="" class="img-fluid p-3">
+                            <a href="javascript:;" title="" class="stretched-link">
+                                <img src="" alt="" title="" class="img-fluid p-3">
                             </a>
                         </div>
                     </div>
-                    <!--            Brands Item:end-->
-                    <!--            Brands Item:start-->
-                    <div class="swiper-slide position-relative">
-                        <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-9.jpg')}}" alt="" title="" class="img-fluid p-3">
-                            </a>
-                        </div>
-                    </div>
-                    <!--            Brands Item:end-->
-                    <!--            Brands Item:start-->
-                    <div class="swiper-slide position-relative">
-                        <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-10.png')}}" alt="" title="" class="img-fluid p-3">
-                            </a>
-                        </div>
-                    </div>
-                    <!--            Brands Item:end-->
-                    <!--            Brands Item:start-->
-                    <div class="swiper-slide position-relative">
-                        <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-11.png')}}" alt="" title="" class="img-fluid p-3">
-                            </a>
-                        </div>
-                    </div>
-                    <!--            Brands Item:end-->
-
-                    <!--            Brands Item:start-->
-                    <div class="swiper-slide position-relative">
-                        <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brand-13.png')}}" alt="" title="" class="img-fluid p-3">
-                            </a>
-                        </div>
-                    </div>
-                    <!--            Brands Item:end-->
-
+                    <!--Brands Item:end-->
                 </div>
                 <div class="swiper-button-next bg-light border-radius-circle"></div>
                 <div class="swiper-button-prev bg-light border-radius-circle"></div>
             </div>
-            <!--            Slider:end-->
+            <!--Slider:end-->
         </section>
-        <!--    Best Brands:end-->
+        <!--Best Brands:end-->
 
-        <!--    Some Products:start-->
-        <section class="some-products border-radius-3xl border border-gray-300 mt-4 overflow-hidden">
-            <!--        Row:start-->
-            <div class="row">
-                <!--            Some Products Item:start-->
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                    <div class="some-products-box p-4">
-                        <div class="some-products-title">
-                            <h4 class="fs-6 fw-bold">گوشی موبایل</h4>
-                            <span class="gray-600 fs-7">بر اساس بازدید های شما</span>
-                        </div>
-                        <div class="some-products-images mt-3">
-                            <a href="" title="" class="d-flex justify-content-center align-items-center p-3"><img
-                                    src="{{asset('user_assets/img/some-p-1.jpg')}}" alt="" title="" class="img-fluid"></a>
-                            <a href="" title="" class="d-flex justify-content-center align-items-center p-3"><img
-                                    src="{{asset('user_assets/img/some-p-2.jpg')}}" alt="" title="" class="img-fluid"></a>
-                            <a href="" title="" class="d-flex justify-content-center align-items-center p-3"><img
-                                    src="{{asset('user_assets/img/some-p-3.jpg')}}" alt="" title="" class="img-fluid"></a>
-                            <a href="" title="" class="d-flex justify-content-center align-items-center p-3"><img
-                                    src="{{asset('user_assets/img/some-p-4.jpg')}}" alt="" title="" class="img-fluid"></a>
-                        </div>
-                    </div>
-                </div>
-                <!--            Some Products Item:end-->
-            </div>
-            <!--        Row:end-->
-        </section>
-        <!--    Some Products:end-->
-
-
-        <!--    Best Sales:start-->
-        
-        <!--    Best Sales:end-->
-
-
-        <!--    Some Products:start-->
-        
-        <!--    Some Products:end-->
-
-        <!--    Blog Section:start-->
+        <!--Blog Section:start-->
         <section class="blog mt-5">
             <div class="d-flex justify-content-between align-items-baseline mb-3">
-                <h2 class="fw-bold fs-6">خواندنی ها</h2>
-                <a href="" class="text-info fs-8">
-                    مطالب بیشتر در برگ شاپ مگ
+                <h1 class="fw-bold fs-6">خواندنی ها :</h1>
+                <a href="{{ route('blog') }}" class="text-danger fs-8">
+                    مطالب بیشتر در قسمت مقالات
                     <i class="fa fa-angle-left ps-1"></i>
                 </a>
             </div>
-
-            <!--        Blog Items:start-->
+            <!--Blog Items:start-->
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
-                    <div class="blog-item border-radius-2xl overflow-hidden mb-3">
-                        <div class="blog-item-img">
-                            <a href=""><img src="{{asset('user_assets/img/blog-2.jpg')}}" alt="" title="" class="img-fluid card-img"></a>
-                        </div>
-                        <div class="blog-item-contents px-2 pb-3">
-                            <h2 class="mt-1">
-                                <a href="" title="" class="fs-6 fw-bold">
-                                    چگونه برنامه نویس شویم؟
+                @foreach ($articles as $article)
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
+                        <div class="blog-item border-radius-2xl overflow-hidden mb-3">
+                            <div class="blog-item-img">
+                                <a href="{{ route('show',$article->id) }}" class="img-fluid card-img">
+                                    @php
+                                        $photo = $article->photo->first();
+                                    @endphp
+                                    @isset($photo)
+                                        <img src="{{asset($photo->src)}}" alt="" class="w-100">
+                                    @endisset
                                 </a>
-                            </h2>
-                            <p class="fs-8">
-                                بهترین راهکار های موجود برای تبدیل به برنامه نویس شدن حرفه ای و ماندگار شدن در این کار
-                            </p>
+                            </div>
+                            <div class="blog-item-contents px-2 pb-3">
+                                <h2 class="mt-1">
+                                    <a href="{{ route('show',$article->id) }}" class="fs-6 fw-bold">
+                                        {{$article->title}}
+                                    </a>
+                                </h2>
+                                <p class="fs-8">
+                                    {{$article->english_title}}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
-                    <div class="blog-item border-radius-2xl overflow-hidden mb-3">
-                        <div class="blog-item-img">
-                            <a href=""><img src="{{asset('user_assets/img/blog-3.jpg')}}" alt="" title="" class="img-fluid card-img"></a>
-                        </div>
-                        <div class="blog-item-contents px-2 pb-3">
-                            <h2 class="mt-1">
-                                <a href="" title="" class="fs-6 fw-bold">
-                                    چگونه برنامه نویس شویم؟
-                                </a>
-                            </h2>
-                            <p class="fs-8">
-                                بهترین راهکار های موجود برای تبدیل به برنامه نویس شدن حرفه ای و ماندگار شدن در این کار
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
-                    <div class="blog-item border-radius-2xl overflow-hidden mb-3">
-                        <div class="blog-item-img">
-                            <a href=""><img src="{{asset('user_assets/img/blog-1.jpg')}}" alt="" title="" class="img-fluid card-img"></a>
-                        </div>
-                        <div class="blog-item-contents px-2 pb-3">
-                            <h2 class="mt-1">
-                                <a href="" title="" class="fs-6 fw-bold">
-                                    چگونه برنامه نویس شویم؟
-                                </a>
-                            </h2>
-                            <p class="fs-8">
-                                بهترین راهکار های موجود برای تبدیل به برنامه نویس شدن حرفه ای و ماندگار شدن در این کار
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
-            <!--        Blog Items:end-->
+            <!--Blog Items:end-->
         </section>
-        <!--    Blog Section:end-->
+        <!--Blog Section:end-->
     </main>
     <!--Main:end-->
 @endsection

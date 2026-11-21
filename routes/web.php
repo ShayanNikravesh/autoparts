@@ -13,7 +13,10 @@ Route::domain('admin.autoparts.test')->middleware('web')->group(base_path('route
 Route::get('/',[HomeController::class,'index'])->name('user_index');
 
 //Discounted Products
-Route::get('index',[ProductController::class,'index'])->name('discounted_products');
+Route::get('Discounted',[ProductController::class,'discounted'])->name('discounted_products');
+
+//Recent Products
+// Route::get('Recent',[ProductController::class,'recent'])->name('recent_products');
 
 //Category Products
 Route::get('category/{id}',[ProductController::class,'category'])->name('category_products');
@@ -31,7 +34,7 @@ Route::get('filter',[ProductController::class,'filter'])->name('filter');
 Route::get('search',[ProductController::class,'search'])->name('search');
 
 //Article
-Route::get('blog',[ArticleControlller::class,'index'])->name('index');
+Route::get('blog',[ArticleControlller::class,'index'])->name('blog');
 Route::get('article/{id}',[ArticleControlller::class,'show'])->name('show');
 
 //About

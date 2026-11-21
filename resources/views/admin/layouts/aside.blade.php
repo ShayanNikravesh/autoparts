@@ -3,7 +3,7 @@
     <div class="brand flex-column-auto" id="kt_brand">
         <!--begin::Logo-->
         <a href="{{ route('admin_index') }}" class="brand-logo">
-            <img alt="Logo" src="{{asset('admin_assets/media/logos/logo-letter.png')}}" />
+            <img alt="Logo" src="{{asset('admin_assets/media/logos/admin.png')}}" />
         </a>
         <!--end::Logo-->
         <!--begin::Toggle-->
@@ -162,6 +162,7 @@
                         </ul>
                     </div>
                 </li>
+                <!--Messages-->
                 <li class="menu-section">
                     <h4 class="menu-text">پیام ها</h4>
                     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>

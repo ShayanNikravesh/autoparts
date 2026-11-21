@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function discounted()
     {
         $products = Product::where('status','active')->where('price_discounted','>',0)->paginate(12);
         return view('user.product.products',compact('products'));
@@ -100,5 +100,11 @@ class ProductController extends Controller
     
         return view('user.product.products', compact('products'));
     }
+    
+    // public function recent()
+    // {
+    //     $products = Product::where('status','active')->latest()->paginate(12);
+    //     return view('user.product.products',compact('products'));
+    // }
     
 }
