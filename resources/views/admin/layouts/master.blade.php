@@ -20,7 +20,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		<meta name="description" content="Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<meta name="csrf-token" content="{{csrf_token()}}">
-		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		
 		<!--begin::Page Vendors Styles(used by this page)-->
 		<link href="{{asset('admin_assets/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
@@ -182,7 +181,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--end::Separator-->
 				<!--begin::Nav-->
 				<div class="navi navi-spacer-x-0 p-0">
-					<!--begin::Item-->
+					<!--begin::Edit-->
 					<a href="{{ route('managers.edit',$manager->id) }}" class="navi-item">
 						<div class="navi-link">
 							<div class="symbol symbol-40 bg-light mr-3">
@@ -203,28 +202,30 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 					</a>
-					<!--end:Item-->
-					<!--begin::Item-->
-					<a href="{{ route('messages.index') }}" class="navi-item">
-						<div class="navi-link">
-							<div class="symbol symbol-40 bg-light mr-3">
-								<div class="symbol-label">
-									<span class="svg-icon svg-icon-md svg-icon-warning">
-										<!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Chart-bar1.svg-->
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-											<path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-										</svg>
-										<!--end::Svg Icon-->
-									</span>
+					<!--end:Edit-->
+					@if ($manager->level == 'manager')
+						<!--begin::Messages-->
+						<a href="{{ route('messages.index') }}" class="navi-item">
+							<div class="navi-link">
+								<div class="symbol symbol-40 bg-light mr-3">
+									<div class="symbol-label">
+										<span class="svg-icon svg-icon-md svg-icon-warning">
+											<!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Chart-bar1.svg-->
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+												<path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+											</svg>
+											<!--end::Svg Icon-->
+										</span>
+									</div>
+								</div>
+								<div class="navi-text">
+									<div class="font-weight-bold">پیام ها</div>
+									<div class="text-muted">پیام های کاربران</div>
 								</div>
 							</div>
-							<div class="navi-text">
-								<div class="font-weight-bold">پیام ها</div>
-								<div class="text-muted">پیام های کاربران</div>
-							</div>
-						</div>
-					</a>
-					<!--end:Item-->
+						</a>
+						<!--end:Messages-->
+					@endif
 				</div>
 				<!--end::Nav-->
 				<!--begin::Separator-->

@@ -17,20 +17,19 @@ Route::get('Login',[AuthController::class,'login'])->name('login');
 
 Route::post('auth',[AuthController::class,'authenticate'])->name('sign_in');
 
-Route::middleware('auth:admin')->group(function () {
+Route::middleware(['auth:admin','operator'.':manager'])->group(function () {
 
     //Dashboard
     Route::get('/', function () {
         return view('admin.index');
-    })->name('dashboard');
+    })->name('dashboard')->withoutMiddleware('operator');
 
     //Logout
-    Route::post('/admin_logout', [AuthController::class, 'logout'])->name('admin_logout');
+    Route::post('/admin_logout', [AuthController::class, 'logout'])->name('admin_logout')->withoutMiddleware('operator');
 
     //Change Status
     Route::post('category/ChangeStatus/{id}',[CategoryController::class,'ChangeStatus'])->name('change_Status_category');
     Route::post('brand/ChangeStatus/{id}',[BrandController::class,'ChangeStatus'])->name('change_Status_brand');
-    Route::post('article/ChangeStatus/{id}',[ArticleController::class,'ChangeStatus'])->name('change_Status_article');
     Route::post('manager/ChangeStatus/{id}',[ManagerController::class,'changeStatus'])->name('change_Status_manager');
     Route::post('product/ChangeStatus/{id}/{status}',[ProductController::class,'changeStatus'])->name('change_Status_product');
 
@@ -42,12 +41,28 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('banner/{id}/photos',[BannerControlller::class,'show'])->name('show_banner_photo');
 
     //Store Photo
-    Route::post('article/photo',[ArticleController::class,'storePhoto'])->name('store_article_photo');
     Route::post('product/photo',[ProductController::class,'storePhoto'])->name('store_product_photo');
     Route::post('banner/photo',[BannerControlller::class,'storePhoto'])->name('store_banner_photo');
+  
+    //Operator
+    Route::withoutMiddleware('operator')->group(function () {
 
-    //Delete Photo
-    Route::delete('photo/{id}',[PhotoController::class,'delete'])->name('delete_photo');
+        //Change Status
+        Route::post('article/ChangeStatus/{id}',[ArticleController::class,'ChangeStatus'])->name('change_Status_article');
+
+        //Store Photo
+        Route::post('article/photo',[ArticleController::class,'storePhoto'])->name('store_article_photo');
+
+        //Delete Photo
+        Route::delete('photo/{id}',[PhotoController::class,'delete'])->name('delete_photo');
+
+        //Article
+        Route::resource('articles', ArticleController::class);
+
+    });
+
+    //Manager
+    Route::resource('managers', ManagerController::class)->withoutMiddlewareFor(['edit', 'update'], 'operator');
 
     //Resources
     Route::resources([
@@ -58,15 +73,9 @@ Route::middleware('auth:admin')->group(function () {
         //Brand
         'brands' => BrandController::class,
 
-        //Article
-        'articles' => ArticleController::class,
-
         //Product
         'products' => ProductController::class,
         
-        //Manager
-        'managers' => ManagerController::class,
-
         //Message
         'messages' => MessageController::class,
 
