@@ -33,10 +33,6 @@ class AuthController extends Controller
             //Checking status
             if($manager->status == 'active'){
                 
-                //last_logged_in_at
-                $manager->last_logged_in_at = now();
-                $manager->save();
-
                 Alert::success('ورود موفق', 'خوش آمدید.');
 
                 $request->session()->regenerate();
