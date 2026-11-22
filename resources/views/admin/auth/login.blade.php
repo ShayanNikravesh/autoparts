@@ -7,7 +7,6 @@
 		<title>Admin | Login</title>
 		<meta name="description" content="Login page example" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<link rel="canonical" href="" />
 
 		<!--begin::Page Custom Styles(used by this page)-->
 		<link href="{{ asset('admin_assets/css/pages/login/login.css') }}" rel="stylesheet" type="text/css" />
