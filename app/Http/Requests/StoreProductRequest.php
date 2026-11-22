@@ -28,6 +28,7 @@ class StoreProductRequest extends FormRequest
         return [
             'title' => ['required', 'string', 'regex:/^[0-9\-\_ پچجحخهعغفقثصضشسیبلاتنمکگوئدذرزطظژآ]+$/i'],
             'english_title' => ['required','regex:/^[A-Za-z0-9\-\_\/]+$/i','string'],
+            'tracking_code' =>['required','string'],
             'category'=>['required','numeric'],
             'brand'=>['required','numeric'],
             'price'=>['required','numeric','integer','min:0'],

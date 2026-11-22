@@ -43,16 +43,13 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        $code = random_int(111111111,999999999);
-        $tracking_code = 'BAP-'.$code;
 
-        dd($request);
         $product = new Product();
         $product->title = $request->title; 
         $product->english_title = $request->english_title;
         $product->category_id = $request->category;
         $product->brand_id = $request->brand;
-        $product->tracking_code = $tracking_code;
+        $product->tracking_code = $request->tracking_code;
         $product->price = $request->price;
         $product->price_discounted = $request->price_discounted;
         $product->status = $request->status;
