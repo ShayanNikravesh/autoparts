@@ -46,13 +46,17 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group row justify-content-center">
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <label><span class="text-danger">*</span> عنوان :</label>
                                 <input type="text" name="title" class="form-control" placeholder="عنوان را وارد کنید...">
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <label><span class="text-danger">*</span> عنوان انگلیسی :</label>
                                 <input type="text" name="english_title" class="form-control" placeholder="عنوان انگلیسی را وارد کنید...">
+                            </div>
+                            <div class="col-lg-3">
+                                <label><span class="text-danger">*</span>کد فنی :</label>
+                                <input type="text" name="tracking_code" class="form-control" placeholder="کد فنی را وارد کنید...">
                             </div>
                         </div>
                         <div class="form-group row justify-content-center">
