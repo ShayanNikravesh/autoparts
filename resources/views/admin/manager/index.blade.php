@@ -95,8 +95,10 @@
 										</span>
 									</td>
 									<td>
-										@if (!empty($manager->last_login_at))
-											<?php echo verta($manager->last_login_at)->format('H:i:s Y/m/d');?>
+										@if (!empty($manager->last_logged_in_at))
+											<span class="badge bg-warning text-dark w-75">
+												<?php echo verta($manager->last_logged_in_at)->format('H:i - Y/m/d');?>
+											</span>
 										@else
 											...                           	
 										@endif
