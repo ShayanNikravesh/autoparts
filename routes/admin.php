@@ -83,5 +83,8 @@ Route::middleware(['auth:admin','operator'.':manager'])->group(function () {
 
 });
 
+Route::fallback(function () {
+    // return view('admin.404');
+});
 
 
