@@ -124,46 +124,31 @@
             <!-- Slider:end -->
         </header>
 
-        <!--Discounted Products:start-->
-        <div class="best-suggestions border-radius-2xl py-1">
-            <!-- Slider:start -->
-            <div class="swiper bestSuggestionsSlider">
-                <div class="swiper-wrapper p-2">
-                    <div class="swiper-slide text-center d-flex flex-column justify-content-between align-items-center">
-                        <img src="{{asset('user_assets/img/Amazings.png')}}" alt="" class="amazing-img">
-                        <img src="{{asset('user_assets/img/box.png')}}" alt="" class="box-img d-block">
-                        <a href="{{ route('discounted_products') }}" class="text-white d-block mt-3" title="">مشاهده همه <i class="fa fa-angle-left align-baseline ms-1"></i></a>
-                    </div>
-                    @foreach ($discounted_products as $product)
-                        <div class="swiper-slide">
-                            @php
-                                $photo = $product->photos->first();
-                            @endphp
-                            @isset($photo)
-                                <img src="{{asset($photo->src)}}" alt="img" class="img-fluid">
-                            @endisset
-                            <div class="product-details d-flex justify-content-between align-items-center mt-4">
-                                <span class="discount-amount text-white px-2 border-radius-3xl fs-6 fw-bold d">{{getpercent($product)}}%</span>
-                                <span class="discounted_price fw-bold fs-5">{{priceFormatter($product->price_discounted)}}</span>
+        <!--Recent Products:start-->
+        <section class="suggestions">
+            <h2 class="text-center fs-4">جدید ترین ها :</h2>
+            <div class="wrapper mt-4 border-radius-3xl border border-gray-300 overflow-hidden">
+                <div class="row">
+                    @foreach ($recent_products as $product)
+                        @php
+                            $photo = $product->photos->first();
+                        @endphp
+                        <div class="suggest-item col-6 col-md-4 col-lg-2 col-xl-2">
+                            <div class="p-3">
+                                <a target="_blank" href="{{ route('single_product',$product->tracking_code) }}" title="" class="stretched-link">
+                                    @isset($photo)
+                                        <img src="{{asset($photo->src)}}" alt="" title="" class="img-fluid p-1">
+                                    @endisset
+                                    <h4 class="mt-3 fs-7">{{ $product->title }}</h4>
+                                </a>
                             </div>
-                            <del class="d-block real_price float-end gray-500 pe-4">{{priceFormatter($product->price)}}</del>
-                            <a target="_blank" href="{{ route('single_product',$product->tracking_code) }}" class="stretched-link" title=""></a>
                         </div>
                     @endforeach
-                    <div class="swiper-slide border-radius-1-tl-bl text-center">
-                        <i class="fa fa-angle-left border-gray-300 text-info"></i>
-                        <a href="{{ route('discounted_products') }}" class="stretched-link d-block text-black-50" title="">مشاهده همه</a>
-                    </div>
                 </div>
-                <div class="swiper-button-next bg-light border-radius-circle border-gray-400"></div>
-                <div class="swiper-button-prev bg-light border-radius-circle border-gray-400"></div>
-                <div class="swiper-pagination"></div>
-
             </div>
-            <!-- Slider:end -->
-        </div>
-        <!--Discounted Products:End-->
-
+        </section>
+        <!--Recent Products:end-->
+ 
         <!--Banners:start-->
         <div class="banners my-5">
             <div class="row">
@@ -202,6 +187,7 @@
         </section>
         <!--Categories:end-->
         <hr>
+
         <!--Small Banners:start-->
         <div class="banners mt-4">
             <div class="row">
@@ -216,31 +202,6 @@
         </div>
         <!--Small Banners:end-->
 
-        <!--Recent Products:start-->
-        <section class="suggestions">
-            <h2 class="text-center fs-4">جدید ترین ها :</h2>
-            <div class="wrapper mt-4 border-radius-3xl border border-gray-300 overflow-hidden">
-                <div class="row">
-                    @foreach ($recent_products as $product)
-                        @php
-                            $photo = $product->photos->first();
-                        @endphp
-                        <div class="suggest-item col-6 col-md-4 col-lg-2 col-xl-2">
-                            <div class="p-3">
-                                <a target="_blank" href="{{ route('single_product',$product->tracking_code) }}" title="" class="stretched-link">
-                                    @isset($photo)
-                                        <img src="{{asset($photo->src)}}" alt="" title="" class="img-fluid p-1">
-                                    @endisset
-                                    <h4 class="mt-3 fs-7">{{ $product->title }}</h4>
-                                </a>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-        <!--Recent Products:end-->
-
         <!--Best Brands:start-->
         <section class="best-brands border-radius-3xl border border-gray-300 mt-4 pb-4">
             <!--Section Title:start-->
@@ -251,45 +212,18 @@
 
             <!--Slider:start-->
             <div class="swiper brandsSlider">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper justify-content-center">
 
                     <!--Brands Item:start-->
                     <div class="swiper-slide position-relative">
                         <div class="brands-item d-flex justify-content-center align-items-center">
                             <a href="javascript:;" title="" class="stretched-link">
-                                <img src="" alt="" title="" class="img-fluid p-3">
+                                <img src="{{asset('user_assets/img/brands/KIA2.png')}}" alt="" title="" class="img-fluid p-3">
                             </a>
                         </div>
                     </div>
                     <!--Brands Item:end-->
 
-                    <!--Brands Item:start-->
-                    <div class="swiper-slide position-relative">
-                        <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="javascript:;" title="" class="stretched-link">
-                                <img src="" alt="" title="" class="img-fluid p-3">
-                            </a>
-                        </div>
-                    </div>
-                    <!--Brands Item:end-->
-                    <!--Brands Item:start-->
-                    <div class="swiper-slide position-relative">
-                        <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="javascript:;" title="" class="stretched-link">
-                                <img src="{{asset('user_assets/img/brands/KIA.png')}}" alt="" title="" class="img-fluid p-3">
-                            </a>
-                        </div>
-                    </div>
-                    <!--Brands Item:end-->
-                    <!--Brands Item:start-->
-                    <div class="swiper-slide position-relative">
-                        <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="javascript:;" title="" class="stretched-link">
-                                <img src="" alt="" title="" class="img-fluid p-3">
-                            </a>
-                        </div>
-                    </div>
-                    <!--Brands Item:end-->
                     <!--Brands Item:start-->
                     <div class="swiper-slide position-relative">
                         <div class="brands-item d-flex justify-content-center align-items-center">
@@ -299,24 +233,7 @@
                         </div>
                     </div>
                     <!--Brands Item:end-->
-                    <!--Brands Item:start-->
-                    <div class="swiper-slide position-relative">
-                        <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="javascript:;" title="" class="stretched-link">
-                                <img src="" alt="" title="" class="img-fluid p-3">
-                            </a>
-                        </div>
-                    </div>
-                    <!--Brands Item:end-->
-                    <!--Brands Item:start-->
-                    <div class="swiper-slide position-relative">
-                        <div class="brands-item d-flex justify-content-center align-items-center">
-                            <a href="javascript:;" title="" class="stretched-link">
-                                <img src="" alt="" title="" class="img-fluid p-3">
-                            </a>
-                        </div>
-                    </div>
-                    <!--Brands Item:end-->
+
                 </div>
                 <div class="swiper-button-next bg-light border-radius-circle"></div>
                 <div class="swiper-button-prev bg-light border-radius-circle"></div>
@@ -366,6 +283,7 @@
             <!--Blog Items:end-->
         </section>
         <!--Blog Section:end-->
+
     </main>
     <!--Main:end-->
 @endsection
