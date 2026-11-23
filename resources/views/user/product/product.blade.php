@@ -10,9 +10,7 @@
             <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 position-relative">
                 <!--Product Incredible Offer:start-->
                 <div class="product-incredible-offer ms-5">
-                    <img src="{{asset('user_assets/img/IncredibleOffer.svg')}}" alt="">
-                    <div class="timer-wrapper">
-                    </div>
+                    
                 </div>
                 <!--Product Incredible Offer:end-->
 
@@ -90,7 +88,7 @@
                                                 <!--Status:start-->
                                                 <div class="warranty my-2 border-bottom-gray-300 pb-2">
                                                     <span class="fw-bold  fs-7">
-                                                        <i class="fa fa-box pe-3 align-middle text-dark"></i>
+                                                        <i class="fa fa-warehouse pe-3 align-middle text-primary"></i>
                                                         موجود در انبار
                                                     </span>
                                                 </div>
@@ -272,5 +270,22 @@
 
 </main>
 <!--Main:end-->
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+        // لینک صفحه را دریافت کنید
+        const url = window.location.href;
+
+        // ایجاد یک عنصر موقت input برای کپی کردن لینک
+        const tempInput = document.createElement('input');
+        tempInput.value = url;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+
+        // نمایش پیغام موفقیت
+        alert('لینک کپی شد.');
+    });
+</script>
 
 @endsection
