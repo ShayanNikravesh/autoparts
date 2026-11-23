@@ -23,13 +23,10 @@ class HomeController extends Controller
 
         //Products
         $products = Product::where('status','active')->latest()->get();
-        $collection = $products->partition(fn ($product) => $product->price_discounted > 0);
 
         //Recent Products
-        $recent_products = $products->take(12);
-        //Discounted Products
-        $discounted_products = $collection[0]->take(10);
+        $recent_products = $products->take(18);
 
-        return view('user.index',compact('carousel','medium_banner','small_banner','articles','products','recent_products','discounted_products'));
+        return view('user.index',compact('carousel','medium_banner','small_banner','articles','products','recent_products'));
     }
 }
