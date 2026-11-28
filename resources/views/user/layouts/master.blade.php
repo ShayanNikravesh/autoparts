@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="canonical" href="{{ url()->current() }}"/>
-    <title>Auto Parts Store</title>
+    <title>Bozorgmehr Parts</title>
 
     <!--    Bootstrap 5 RTL-->
     <link rel="stylesheet" href="{{asset('user_assets/css/vendors/bootstrap/bootstrap.rtl.css')}}">
@@ -244,8 +244,8 @@
 <!--Navbar:start-->
 <div class="custom-navbar" id="customNavbar">
     <!--Ads Banner:start-->
-    <a href="" class="ads-banner" title="">
-        <img src="{{asset('user_assets/img/ads-banner.jpg')}}" alt="" class="img-fluid object-cover">
+    <a href="https://www.instagram.com/bozorgmehr_parts?cnvx=eTduOTNwNnZkeHV1" class="ads-banner" title="">
+        <img src="{{asset('user_assets/img/insta-banner.jpg')}}" alt="" class="img-fluid object-cover">
     </a>
     <!--Ads Banner:end-->
 
